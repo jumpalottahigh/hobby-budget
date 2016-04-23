@@ -1,5 +1,8 @@
 //DEV
 var firebaseDB = new Firebase("https://boiling-heat-4669.firebaseio.com/hobby-budget/");
+//PRODUCTION
+// var firebaseDB = new Firebase("https://hobby-budget.firebaseio.com");
+
 var user = firebaseDB.getAuth();
 
 //Authenticate the user
