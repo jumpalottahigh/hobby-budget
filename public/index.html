@@ -67,12 +67,12 @@
                   </label>
                   <select id="expenseCategory" class="form-control">
                     <option value="alcohol">Alcohol</option>
-                    <option value="books">Book</option>
-                    <option value="digital">Digital</option>
+                    <option value="baby-stuff">Baby stuff</option>
+                    <option value="clothes">Clothes</option>
                     <option value="electronics">Electronics</option>
                     <option value="entertainment">Entertainment</option>
-                    <option value="general">General</option>
-                    <option value="subscription">Subscription</option>
+                    <option value="home-upgrades">Home upgrades</option>
+                    <option value="makeup">Make up</option>
                   </select>
                   <button id="btnAddExpense" class="btn btn-primary form-control margin-top">Add</button>
                 </div>
@@ -86,14 +86,28 @@
         <div role="tabpanel" class="tab-pane fade" id="stats">
           <section>
             <div class="container text-center">
+              <!-- By category, this year and this month -->
               <div class="row">
-                <h3>Last purchases</h3>
+                <h3>Total purchase amounts by category</h3>
+                <h4 class="col-xs-4">Category</h4>
+                <h4 class="col-xs-4">This Month</h4>
+                <h4 class="col-xs-4">This year</h4>
+              </div>
+              <div id="totals" class="row">
+              </div>
+              <!-- End By category, this year and this month -->
+
+              <hr>
+
+              <!-- Purchase history -->
+              <div class="row">
+                <h3>Purchase History</h3>
               </div>
               <div class="row">
                 <div id="purchases" class="col-sm-6 col-sm-offset-3">
-
                 </div>
               </div>
+              <!-- End Purchase history -->
             </div>
           </section>
         </div>

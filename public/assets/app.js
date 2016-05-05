@@ -55,8 +55,6 @@ function validateInput(input) {
 
 //Grab initial data from DB and populate UI
 firebaseDB.on("value", function (snap) {
-  //DUBUGGERS
-  console.log(snap.val());
   var currentTimestamp = Date.now();
 
   //First time start up initializers
@@ -96,20 +94,46 @@ firebaseDB.on("value", function (snap) {
 
   //Get all purchases from FB
   var allPurchases = snap.val().purchases;
-  var constructor = "";
+  var constructorPurchases = "";
+  var constructorTotals = '';
+  var totalThisMonth = 0;
+  var totalThisYear = 0;
+
   for (var i in allPurchases) {
-    constructor += "<h2 class='flex-row text-info'>" + i + "</h2><div class='flexbox-container margin-top'>";
+    constructorPurchases += "<h2 class='flex-row text-info'>" + i + "</h2><div class='flexbox-container margin-top'>";
+
+    //Collect totals information
+    constructorTotals += '<div class="col-xs-4">' + i + "</div>";
 
     for (var j in allPurchases[i]) {
-      constructor += '<div class="box flex-item text-left">';
-      constructor += '<b>Name: ' + allPurchases[i][j].name + '<br>Price: ' + allPurchases[i][j].price + '<br>Date: ' + moment(allPurchases[i][j].timestamp).format("Do MMM YYYY") + '</b>';
-      constructor += '</div>';
+      //Purchase history
+      constructorPurchases += '<div class="box flex-item text-left">';
+      constructorPurchases += '<b>Name: ' + allPurchases[i][j].name + '<br>Price: ' + allPurchases[i][j].price + '<br>Date: ' + moment(allPurchases[i][j].timestamp).format("Do MMM YYYY") + '</b>';
+      constructorPurchases += '</div>';
+
+      //Check whether to add purchase to current month or current year
+      if(moment(currentTimestamp).format("MMM") == moment(allPurchases[i][j].timestamp).format("MMM")) {
+        //Purchse was done in the current month
+        totalThisMonth += parseFloat(allPurchases[i][j].price);
+      }
+      if(moment(currentTimestamp).format("YYYY") == moment(allPurchases[i][j].timestamp).format("YYYY")) {
+        //Purchase in the current year
+        totalThisYear += parseFloat(allPurchases[i][j].price);
+      }
     }
-    constructor += "</div>";
+    constructorPurchases += "</div>";
+
+    //Fix to 2 decimal places
+    constructorTotals += '<div class="col-xs-4 text-success"><strong>' + totalThisMonth.toFixed(2) + '</strong></div><div class="col-xs-4 text-info"><strong>' + totalThisYear.toFixed(2) + '</strong></div>';
+
+    //Reset total counters for next itiration
+    totalThisMonth = 0;
+    totalThisYear = 0;
   }
 
   //Update the UI
-  $('#purchases').html(constructor);
+  $('#totals').html(constructorTotals);
+  $('#purchases').html(constructorPurchases);
   $('#monthlyAllowance').val(snap.val().monthlyAllowance);
   $('#currentBalance').html("<b>" + snap.val().balance + "</b>");
   $('#nextPayment').html("<b>" + moment(snap.val().nextPaymentDate).endOf('day').fromNow() + "</b><br>On: <b>" + moment(snap.val().nextPaymentDate).format("Do MMM YYYY") + "</b>");
