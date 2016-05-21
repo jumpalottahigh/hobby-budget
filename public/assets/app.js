@@ -1,19 +1,19 @@
 // Initialize Firebase
 //Production
-// var config = {
-//   apiKey: "AIzaSyDCMODJqnwMKRwS2xI1OVugW-G5PzzNraA",
-//   authDomain: "hobby-budget.firebaseapp.com",
-//   databaseURL: "https://hobby-budget.firebaseio.com",
-//   storageBucket: "hobby-budget.appspot.com",
-// };
+var config = {
+  apiKey: "AIzaSyDCMODJqnwMKRwS2xI1OVugW-G5PzzNraA",
+  authDomain: "hobby-budget.firebaseapp.com",
+  databaseURL: "https://hobby-budget.firebaseio.com",
+  storageBucket: "hobby-budget.appspot.com",
+};
 
 //Development
-var config = {
-  apiKey: "AIzaSyDJJAuimDWqUJJCrSAUexG95PwoXSuCahw",
-  authDomain: "boiling-heat-4669.firebaseapp.com",
-  databaseURL: "https://boiling-heat-4669.firebaseio.com",
-  storageBucket: "boiling-heat-4669.appspot.com",
-};
+// var config = {
+//   apiKey: "AIzaSyDJJAuimDWqUJJCrSAUexG95PwoXSuCahw",
+//   authDomain: "boiling-heat-4669.firebaseapp.com",
+//   databaseURL: "https://boiling-heat-4669.firebaseio.com",
+//   storageBucket: "boiling-heat-4669.appspot.com",
+// };
 
 //Create app, DB ref and auth
 var app = firebase.initializeApp(config);
@@ -40,7 +40,6 @@ loggedIn();
 
 //Authenticate the user
 function login(username, pass) {
-  //REFACTOR LOGIN TO 3.0
   auth.signInWithEmailAndPassword(username, pass).catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;
