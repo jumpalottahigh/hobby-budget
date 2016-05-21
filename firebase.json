@@ -1,6 +1,7 @@
 {
-  "firebase": "hobby-budget",
-  "public": "public",
+  "hosting": {
+    "public": "public"
+  },
   "ignore": [
     "firebase.json",
     "**/.*",

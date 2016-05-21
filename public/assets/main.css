@@ -33,3 +33,8 @@
 .flex-item {
   width: 47%;
 }
+
+.grand-total {
+  font-size: 2rem;
+  border-top: 2px solid #cecece;
+}
