@@ -74,7 +74,7 @@ firebaseDB.on("value", function(snap) {
   if (snap.val().balance === undefined) {
     //Create a recurring payment at first date
     var startingDate = currentTimestamp;
-    var nextDate = moment(startingDate).add(30, 'days').unix() * 1000;
+    var nextDate = moment(startingDate).add(1, 'month').unix() * 1000;
 
     var initBalance;
     if ($('#monthlyAllowance').val() === "") {
@@ -94,7 +94,7 @@ firebaseDB.on("value", function(snap) {
   if (parseInt(currentTimestamp) > parseInt(snap.val().nextPaymentDate)) {
     var updateBalance = parseInt(snap.val().balance);
     var updateNextPaymentDate = snap.val().nextPaymentDate;
-    updateNextPaymentDate = moment(updateNextPaymentDate).add(30, 'days').unix() * 1000;
+    updateNextPaymentDate = moment(updateNextPaymentDate).add(1, 'month').unix() * 1000;
     updateBalance += parseInt(snap.val().monthlyAllowance);
     //Update balance and set next payment time
     firebaseDB.update({
@@ -117,7 +117,7 @@ firebaseDB.on("value", function(snap) {
     constructorPurchases += "<h2 class='flex-row text-info'>" + i + "</h2><div class='flexbox-container margin-top'>";
 
     //Collect totals information
-    constructorTotals += '<div class="col-xs-4">' + i + '</div>';
+    constructorTotals += '<div class="row"><div class="col-xs-4">' + i + '</div>';
 
     for (var j in allPurchases[i]) {
       //Purchase history
@@ -138,7 +138,7 @@ firebaseDB.on("value", function(snap) {
     constructorPurchases += "</div>";
 
     //Fix to 2 decimal places
-    constructorTotals += '<div class="col-xs-4 text-success"><strong>' + totalThisMonth.toFixed(2) + '</strong></div><div class="col-xs-4 text-info"><strong>' + totalThisYear.toFixed(2) + '</strong></div>';
+    constructorTotals += '<div class="col-xs-4 text-success"><strong>' + totalThisMonth.toFixed(2) + '</strong></div><div class="col-xs-4 text-info"><strong>' + totalThisYear.toFixed(2) + '</strong></div></div>';
 
     //Add the current total to the grand total
     grandTotalMonth += totalThisMonth;
