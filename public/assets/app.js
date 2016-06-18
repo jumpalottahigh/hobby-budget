@@ -55,14 +55,38 @@ function login(username, pass) {
   });
 }
 
-
-
 function validateInput(input) {
   if (input === "") {
     return false;
   } else {
     return true;
   }
+}
+
+function filterByMonth(mon) {
+  //Reset all prev filters
+  $('.purchase').show();
+  //Create the correct monthly filter
+  var monthFilter = mon || Date.now();
+
+  if (!mon) {
+    monthFilter = moment(monthFilter).format('MMM');
+  }
+
+  $('.purchase time').each(function(i, item) {
+    var purchaseDate = parseInt($(item).attr('datetime'));
+    if (moment(purchaseDate).format('MMM') !== monthFilter) {
+      $(item).closest('.purchase').hide();
+    }
+  });
+}
+
+function calculateDaysSince(startDate) {
+  //Calculate exact days ago
+  var oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+  var now = new Date();
+  var amountOfDays = Math.round(Math.abs((startDate - now.getTime()) / (oneDay)));
+  return amountOfDays;
 }
 
 //Grab initial data from DB and populate UI
@@ -108,6 +132,9 @@ firebaseDB.on("value", function(snap) {
   var allPurchases = snap.val().purchases;
   var constructorPurchases = "";
   var constructorTotals = '';
+  var constructorTotalDaysSinceStart = '';
+  var constructorAverages = '';
+  var totalDaysSinceStart = calculateDaysSince(snap.val().startingDate);
   var totalThisMonth = 0;
   var totalThisYear = 0;
   var grandTotalMonth = 0;
@@ -119,11 +146,14 @@ firebaseDB.on("value", function(snap) {
     //Collect totals information
     constructorTotals += '<div class="row"><div class="col-xs-4">' + i + '</div>';
 
+    //Construct averages
+    constructorAverages += '<div class="row"><div class="col-xs-6 text-right">' + i + '</div>';
+
     for (var j in allPurchases[i]) {
       //Purchase history
       constructorPurchases += '<div class="box flex-item purchase text-left">';
       constructorPurchases += '<p>Name: <strong>' + allPurchases[i][j].name + '</strong></p>';
-      constructorPurchases += '<p>Price: <strong>' + allPurchases[i][j].price + '</strong></p>';
+      constructorPurchases += '<p>Price: <strong>' + parseFloat(allPurchases[i][j].price).toFixed(2) + ' &euro;</strong></p>';
       constructorPurchases += '<p>Date: <strong><time datetime="' + allPurchases[i][j].timestamp + '">' + moment(allPurchases[i][j].timestamp).format("Do MMM YYYY") + '</time></strong></p>';
       constructorPurchases += '</div>';
 
@@ -140,7 +170,10 @@ firebaseDB.on("value", function(snap) {
     constructorPurchases += "</div>";
 
     //Fix to 2 decimal places
-    constructorTotals += '<div class="col-xs-4 text-success"><strong>' + totalThisMonth.toFixed(2) + '</strong></div><div class="col-xs-4 text-info"><strong>' + totalThisYear.toFixed(2) + '</strong></div></div>';
+    constructorTotals += '<div class="col-xs-4 text-success"><strong>' + totalThisMonth.toFixed(2) + ' &euro;</strong></div><div class="col-xs-4 text-info"><strong>' + totalThisYear.toFixed(2) + ' &euro;</strong></div></div>';
+
+    //Calculate the averages per day
+    constructorAverages += '<div class="col-xs-6 text-left"><strong>' + (totalThisYear / totalDaysSinceStart).toFixed(2) + ' &euro;</strong></div></div>';
 
     //Add the current total to the grand total
     grandTotalMonth += totalThisMonth;
@@ -151,15 +184,23 @@ firebaseDB.on("value", function(snap) {
     totalThisYear = 0;
   }
 
-  constructorGrandTotal = '<div class="col-xs-4"><strong>Grand Total</strong></div><div class="col-xs-4 text-success"><strong>' + grandTotalMonth.toFixed(2) + '</strong></div><div class="col-xs-4 text-info"><strong>' + grandTotalYear.toFixed(2) + '</strong></div>';
+  constructorGrandTotal = '<div class="col-xs-4"><strong>Grand Total</strong></div><div class="col-xs-4 text-success"><strong>' + grandTotalMonth.toFixed(2) + ' &euro;</strong></div><div class="col-xs-4 text-info"><strong>' + grandTotalYear.toFixed(2) + ' &euro;</strong></div>';
+
+  constructorAverageTotal = '<div class="col-xs-6 text-right grand-total"><strong>Average Total</strong></div><div class="col-xs-6 text-primary text-left grand-total"><strong>' + (grandTotalYear / totalDaysSinceStart).toFixed(2) + ' &euro;</strong></div>';
+
+  //Calculate the average values per day
+  constructorTotalDaysSinceStart += '<h4 class="flex-row">Total amount of days since start: <strong>' + totalDaysSinceStart + '</strong></h4>';
 
   //Update the UI
   $('#grand-total').html(constructorGrandTotal);
   $('#totals').html(constructorTotals);
   $('#purchases').html(constructorPurchases);
+  $('#average-spendings').html(constructorTotalDaysSinceStart);
+  $('#average-spendings').append(constructorAverages);
+  $('#average-spendings').append(constructorAverageTotal);
   $('#monthlyAllowance').val(snap.val().monthlyAllowance);
-  $('#currentBalance').html("<b>" + snap.val().balance + "</b>");
-  $('#nextPayment').html("<b>" + moment(snap.val().nextPaymentDate).endOf('day').fromNow() + "</b><br>On: <b>" + moment(snap.val().nextPaymentDate).format("Do MMM YYYY") + "</b>");
+  $('#currentBalance').html("<strong>" + snap.val().balance + "</strong>");
+  $('#nextPayment').html("<strong>" + moment(snap.val().nextPaymentDate).endOf('day').fromNow() + "</strong><br>On: <strong>" + moment(snap.val().nextPaymentDate).format("Do MMM YYYY") + "</strong>");
 
   //Set monthly filter selected to current month
   $('#filterByMonth').val(moment(currentTimestamp).format("MMM"));
@@ -217,24 +258,6 @@ $('#btnAddExpense').click(function() {
     console.log("Input not validated!");
   }
 });
-
-function filterByMonth(mon) {
-  //Reset all prev filters
-  $('.purchase').show();
-  //Create the correct monthly filter
-  var monthFilter = mon || Date.now();
-
-  if (!mon) {
-    monthFilter = moment(monthFilter).format('MMM');
-  }
-
-  $('.purchase time').each(function(i, item) {
-    var purchaseDate = parseInt($(item).attr('datetime'));
-    if (moment(purchaseDate).format('MMM') !== monthFilter) {
-      $(item).closest('.purchase').hide();
-    }
-  });
-}
 
 //Filter by month button
 $('#filterByMonth').on('change', function() {

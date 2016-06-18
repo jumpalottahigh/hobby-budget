@@ -16,6 +16,9 @@
 .margin-right {
   margin-top: 1em !important;
 }
+.border-bottom {
+  border-bottom: 1px solid #cecece;
+}
 .box {
   box-shadow: 0 0 5px #222;
   padding: 1rem;
