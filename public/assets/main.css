@@ -17,10 +17,14 @@
   margin-top: 1em !important;
 }
 .box {
-  box-shadow: 2px 2px 2px 2px #cecece;
+  box-shadow: 0 0 5px #222;
   padding: 1rem;
   margin-right: 1rem;
   margin-top: 1rem;
+}
+
+.box p {
+  margin: 0;
 }
 .flexbox-container {
   display: flex;
@@ -38,4 +42,5 @@
 .grand-total {
   font-size: 2rem;
   border-top: 2px solid #cecece;
+  border-bottom: 2px solid #cecece;
 }

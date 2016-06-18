@@ -121,8 +121,10 @@ firebaseDB.on("value", function(snap) {
 
     for (var j in allPurchases[i]) {
       //Purchase history
-      constructorPurchases += '<div class="box flex-item text-left">';
-      constructorPurchases += '<b>Name: ' + allPurchases[i][j].name + '<br>Price: ' + allPurchases[i][j].price + '<br>Date: ' + moment(allPurchases[i][j].timestamp).format("Do MMM YYYY") + '</b>';
+      constructorPurchases += '<div class="box flex-item purchase text-left">';
+      constructorPurchases += '<p>Name: <strong>' + allPurchases[i][j].name + '</strong></p>';
+      constructorPurchases += '<p>Price: <strong>' + allPurchases[i][j].price + '</strong></p>';
+      constructorPurchases += '<p>Date: <strong><time datetime="' + allPurchases[i][j].timestamp + '">' + moment(allPurchases[i][j].timestamp).format("Do MMM YYYY") + '</time></strong></p>';
       constructorPurchases += '</div>';
 
       //Check whether to add purchase to current month or current year
@@ -149,8 +151,6 @@ firebaseDB.on("value", function(snap) {
     totalThisYear = 0;
   }
 
-  // console.log(grandTotalMonth);
-  // console.log(grandTotalYear);
   constructorGrandTotal = '<div class="col-xs-4"><strong>Grand Total</strong></div><div class="col-xs-4 text-success"><strong>' + grandTotalMonth.toFixed(2) + '</strong></div><div class="col-xs-4 text-info"><strong>' + grandTotalYear.toFixed(2) + '</strong></div>';
 
   //Update the UI
@@ -160,6 +160,7 @@ firebaseDB.on("value", function(snap) {
   $('#monthlyAllowance').val(snap.val().monthlyAllowance);
   $('#currentBalance').html("<b>" + snap.val().balance + "</b>");
   $('#nextPayment').html("<b>" + moment(snap.val().nextPaymentDate).endOf('day').fromNow() + "</b><br>On: <b>" + moment(snap.val().nextPaymentDate).format("Do MMM YYYY") + "</b>");
+
 });
 
 
@@ -211,4 +212,15 @@ $('#btnAddExpense').click(function() {
   } else {
     console.log("Input not validated!");
   }
+});
+
+//Filter by month button
+$('#filterByMonth').click(function() {
+  $('.purchase time').each(function(i, item) {
+    var purchaseDate = parseInt($(item).attr('datetime'));
+    var currentDate = Date.now();
+    if (moment(purchaseDate).format('MMM') !== moment(currentDate).format('MMM')) {
+      $(item).closest('.purchase').hide();
+    }
+  });
 });
