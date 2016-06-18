@@ -105,7 +105,23 @@
                 <h3>Purchase History</h3>
               </div>
               <div class="row">
-                <button id="filterByMonth">Filter by month</button>
+                <label for="filterByMonth">Filter by month:</label>
+                <select id="filterByMonth">
+                  <option value="Jan">January</option>
+                  <option value="Feb">February</option>
+                  <option value="Mar">March</option>
+                  <option value="Apr">April</option>
+                  <option value="May">May</option>
+                  <option value="Jun">June</option>
+                  <option value="Jul">July</option>
+                  <option value="Aug">August</option>
+                  <option value="Sep">September</option>
+                  <option value="Oct">October</option>
+                  <option value="Nov">November</option>
+                  <option value="Dec">December</option>
+                </select>
+                - OR -
+                <button id="filterShowAll" class="btn btn-success">Show all purchases</button>
               </div>
               <div class="row">
                 <div id="purchases" class="col-sm-6 col-sm-offset-3">

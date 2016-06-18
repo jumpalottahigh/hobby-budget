@@ -161,6 +161,10 @@ firebaseDB.on("value", function(snap) {
   $('#currentBalance').html("<b>" + snap.val().balance + "</b>");
   $('#nextPayment').html("<b>" + moment(snap.val().nextPaymentDate).endOf('day').fromNow() + "</b><br>On: <b>" + moment(snap.val().nextPaymentDate).format("Do MMM YYYY") + "</b>");
 
+  //Set monthly filter selected to current month
+  $('#filterByMonth').val(moment(currentTimestamp).format("MMM"));
+  //Update UI with current month filter
+  filterByMonth();
 });
 
 
@@ -214,13 +218,30 @@ $('#btnAddExpense').click(function() {
   }
 });
 
-//Filter by month button
-$('#filterByMonth').click(function() {
+function filterByMonth(mon) {
+  //Reset all prev filters
+  $('.purchase').show();
+  //Create the correct monthly filter
+  var monthFilter = mon || Date.now();
+
+  if (!mon) {
+    monthFilter = moment(monthFilter).format('MMM');
+  }
+
   $('.purchase time').each(function(i, item) {
     var purchaseDate = parseInt($(item).attr('datetime'));
-    var currentDate = Date.now();
-    if (moment(purchaseDate).format('MMM') !== moment(currentDate).format('MMM')) {
+    if (moment(purchaseDate).format('MMM') !== monthFilter) {
       $(item).closest('.purchase').hide();
     }
   });
+}
+
+//Filter by month button
+$('#filterByMonth').on('change', function() {
+  filterByMonth($(this).val());
+});
+
+//Show all purchases
+$('#filterShowAll').on('click', function() {
+  $('.purchase').show();
 });
