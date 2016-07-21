@@ -199,7 +199,7 @@ firebaseDB.on("value", function(snap) {
   $('#average-spendings').append(constructorAverages);
   $('#average-spendings').append(constructorAverageTotal);
   $('#monthlyAllowance').val(snap.val().monthlyAllowance);
-  $('#currentBalance').html("<strong>" + snap.val().balance + "</strong>");
+  $('#currentBalance').html("<strong>" + snap.val().balance.toFixed(2) + "</strong>");
   $('#nextPayment').html("<strong>" + moment(snap.val().nextPaymentDate).endOf('day').fromNow() + "</strong><br>On: <strong>" + moment(snap.val().nextPaymentDate).format("Do MMM YYYY") + "</strong>");
 
   //Set monthly filter selected to current month
