@@ -1,6 +1,8 @@
-<img src="hobby-budget.png">
-# hobby-budget
-Plan your hobby budget. Add monthly allowance, track spendings by category.
+# Hobby Budget
+
+Plan your budget. Add monthly allowance, track expenses by category.
+
+![Hobby Budget](hobby-budget.png)
 
 ## Social Links
 
