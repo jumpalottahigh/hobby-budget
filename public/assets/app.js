@@ -7,14 +7,6 @@ var config = {
   storageBucket: "hobby-budget.appspot.com",
 };
 
-//Development
-// var config = {
-//   apiKey: "AIzaSyDJJAuimDWqUJJCrSAUexG95PwoXSuCahw",
-//   authDomain: "boiling-heat-4669.firebaseapp.com",
-//   databaseURL: "https://boiling-heat-4669.firebaseio.com",
-//   storageBucket: "boiling-heat-4669.appspot.com",
-// };
-
 //Create app, DB ref and auth
 var app = firebase.initializeApp(config);
 var firebaseDB = app.database().ref();
@@ -189,7 +181,7 @@ firebaseDB.on("value", function(snap) {
   constructorAverageTotal = '<div class="col-xs-6 text-right grand-total"><strong>Average Total</strong></div><div class="col-xs-6 text-primary text-left grand-total"><strong>' + (grandTotalYear / totalDaysSinceStart).toFixed(2) + ' &euro;</strong></div>';
 
   //Calculate the average values per day
-  constructorTotalDaysSinceStart += '<h4 class="flex-row">Total amount of days since start: <strong>' + totalDaysSinceStart + '</strong></h4>';
+  constructorTotalDaysSinceStart += '<h4 class="flex-row">Total amount of days since start: <strong>' + totalDaysSinceStart + '</strong> (' + moment(snap.val().startingDate).format("Do MMM YYYY") + ')</h4>';
 
   //Update the UI
   $('#grand-total').html(constructorGrandTotal);
