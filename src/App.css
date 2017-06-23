@@ -1,0 +1,33 @@
+.card {
+  height: 150px;
+}
+.login {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.alcohol {
+  background-color: #0099CC;
+}
+.baby-stuff {
+  background-color: #CCFFCC;
+}
+.clothes {
+  background-color: #66CCFF;
+}
+.electronics {
+  background-color: #003399;
+}
+.entertainment {
+  background-color: #C3C3E5;
+}
+.gifts {
+  background-color: #b4fcf4;
+}
+.home-upgrades {
+  background-color: #8C489F;
+}
+.junk-food {
+  background-color: #003366;
+}
+.makeup {
+  background-color: #00FF99;
+}

@@ -1,0 +1,49 @@
+/*Integrate Roboto*/
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+/*Spacing Helpers*/
+.margin-top {
+  margin-top: 1em !important;
+}
+.margin-bottom {
+  margin-top: 1em !important;
+}
+.margin-left {
+  margin-top: 1em !important;
+}
+.margin-right {
+  margin-top: 1em !important;
+}
+.border-bottom {
+  border-bottom: 1px solid #cecece;
+}
+.box {
+  box-shadow: 0 0 5px #222;
+  padding: 1rem;
+  margin-right: 1rem;
+  margin-top: 1rem;
+}
+
+.box p {
+  margin: 0;
+}
+.flexbox-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.flex-row {
+  flex: 1 0 0;
+}
+.flex-item {
+  width: 45%;
+}
+
+.grand-total {
+  font-size: 2rem;
+  border-top: 2px solid #cecece;
+  border-bottom: 2px solid #cecece;
+}
