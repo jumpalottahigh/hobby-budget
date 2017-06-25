@@ -10,6 +10,7 @@ class App extends Component {
   constructor () {
     super()
     this.state = {
+      isLoggedIn: false,
       currentItem: '',
       currentPrice: '',
       currentCategory: 'home-upgrades',
@@ -25,6 +26,7 @@ class App extends Component {
     this.handleFilterByYear = this.handleFilterByYear.bind(this)
     this.handleFilterByMonth = this.handleFilterByMonth.bind(this)
     this.handleLogin = this.handleLogin.bind(this)
+    this.handleLogout = this.handleLogout.bind(this)
   }
 
   //
@@ -43,18 +45,16 @@ class App extends Component {
 
   // Check login state
   //Check if the user is logged in
-  loggedInState() {
+  loggedInState () {
     firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
-        //singed in
-        // $('#loginStatus').removeClass("alert-danger").addClass("alert-success").html("You are logged in as: " + JSON.stringify(user.email));
-        // $('#btnModalLogin').hide();
+        let logoutSection = document.getElementById('logoutSection')
+        logoutSection.style.display = 'block'
         console.log('singed in')
         return true
       } else {
-        //signed out
-        // $('#loginStatus').removeClass("alert-success").addClass("alert-danger").html("Not logged in!");
-        // $('#btnModalLogin').show();
+        let loginSection = document.getElementById('loginSection')
+        loginSection.style.display = 'block'
         console.log('singed out')
         return false
       }
@@ -65,9 +65,6 @@ class App extends Component {
   handleLogin () {
     let email = document.getElementById('email').value
     let password = document.getElementById('password').value
-
-    console.log(`testing email: ${email}, testing password: ${password}`)
-    console.log(this.loggedInState())
 
     firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
       // Handle Errors here.
@@ -80,7 +77,13 @@ class App extends Component {
       } else {
         console.error(error)
       }
+      window.location.reload()
     })
+  }
+
+  // Handle logout
+  handleLogout () {
+    firebase.auth().signOut()
   }
 
   // Remove item
@@ -214,7 +217,6 @@ class App extends Component {
 
         if (!isNaN(parseInt(cards[i].dataset.price, 10))) {
           totalMoney += parseInt(cards[i].dataset.price, 10)
-          console.log(totalMoney)
         }
       }
       this.setState({
@@ -229,7 +231,7 @@ class App extends Component {
   render () {
     return (
       <div className='container text-center'>
-        <div className='row pt-1 pb-4 login'>
+        <div id="loginSection" className='row pt-1 pb-4 login'>
           <h6 className='col-12 mt-3 text-warning'>You are not logged in. Your data won't be saved to Firebase.</h6>
           <div className="col-12 col-sm-6 col-md-4 offset-md-4">
             <input className='form-control mb-3' id="email" type='text' name='email' placeholder='Email' />
@@ -239,6 +241,12 @@ class App extends Component {
           </div>
           <div className="col-12">
             <button className='btn btn-primary' id="btnLogin" onClick={this.handleLogin} >Login</button>
+          </div>
+        </div>
+        <div id="logoutSection" className='row pt-1'>
+          <div className='col-12 text-right'>
+            You are logged in as ...
+            <button className='btn btn-info' id="btnLogout" onClick={this.handleLogout} >Logout</button>
           </div>
         </div>
         <header className='row'>
