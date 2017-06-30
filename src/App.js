@@ -10,7 +10,6 @@ class App extends Component {
   constructor () {
     super()
     this.state = {
-      isLoggedIn: false,
       currentItem: '',
       currentPrice: '',
       currentCategory: 'home-upgrades',
@@ -51,6 +50,7 @@ class App extends Component {
         let logoutSection = document.getElementById('logoutSection')
         logoutSection.style.display = 'block'
         console.log('singed in')
+        console.log(user.email)
         return true
       } else {
         let loginSection = document.getElementById('loginSection')
@@ -77,7 +77,7 @@ class App extends Component {
       } else {
         console.error(error)
       }
-      window.location.reload()
+      // window.location.reload()
     })
   }
 
@@ -225,6 +225,9 @@ class App extends Component {
         reportTotalMoneySpent: totalMoney
       })
     })
+
+    // Get initial login state
+    this.loggedInState()
   }
 
   // Render
@@ -245,7 +248,7 @@ class App extends Component {
         </div>
         <div id="logoutSection" className='row pt-1'>
           <div className='col-12 text-right'>
-            You are logged in as ...
+            You are logged in.
             <button className='btn btn-info' id="btnLogout" onClick={this.handleLogout} >Logout</button>
           </div>
         </div>
@@ -312,9 +315,9 @@ class App extends Component {
             {this.state.items.map((item) => {
               return (
                 <div className='col-12 col-sm-6 col-md-6 col-lg-3 mb-3' key={item.id}>
-                  <div className={`card ${item.category}`} data-category={item.category} data-date={item.timestamp} data-name={item.name} data-price={item.price} key={item.id}>
+                  <div className='card' data-category={item.category} data-date={item.timestamp} data-name={item.name} data-price={item.price} key={item.id}>
+                    <h5><span className={`col-12 badge badge-default ${item.category}`}>{item.category}</span></h5>
                     <h5>{item.name}</h5>
-                    <h6>{item.category}</h6>
                     <p>Price: {item.price} | Date: <Moment format='Do MMM YYYY'>{item.timestamp}</Moment></p>
                   </div>
                 </div>
