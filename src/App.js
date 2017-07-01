@@ -102,7 +102,7 @@ class App extends Component {
 
     // Explicitly show or hide nodes
     for (let i = 0, cardLen = cards.length; i < cardLen; i++) {
-      if (cat === 'all') {
+      if (cat === 'All') {
         cards[i].parentNode.style.display = 'initial'
       } else if (cat === cards[i].dataset.category) {
         cards[i].parentNode.style.display = 'initial'
@@ -281,7 +281,7 @@ class App extends Component {
           <section className='col-12'>
             <h2 className='col-12'>Filter by year:</h2>
             <div className='col-12 mb-2'>
-              <input type='button' className='btn btn-secondary m-1' onClick={this.handleFilterByYear} value='all' />
+              <input type='button' className='btn btn-secondary m-1' onClick={this.handleFilterByYear} value='All' />
               {this.state.filterYears.map((item) => {
                 return (
                   <input className='btn btn-secondary m-1' key={item} onClick={this.handleFilterByYear} type='button' value={item} />
@@ -290,7 +290,7 @@ class App extends Component {
             </div>
             <h2 className='col-12'>Filter by month:</h2>
             <div className='col-12 mb-2'>
-              <input type='button' className='btn btn-secondary m-1' onClick={this.handleFilterByMonth} value='all' />
+              <input type='button' className='btn btn-secondary m-1' onClick={this.handleFilterByMonth} value='All' />
               {this.state.filterMonths.map((item) => {
                 return (
                   <input className='btn btn-secondary m-1' key={item} onClick={this.handleFilterByMonth} type='button' value={item} />
@@ -301,7 +301,7 @@ class App extends Component {
           <section className='row'>
             <h2 className='col-12'>Filter by category:</h2>
             <div className='col-12 mb-2'>
-              <input type='button' className='btn btn-secondary m-1' onClick={this.handleClick} value='all' />
+              <input type='button' className='btn btn-secondary m-1' onClick={this.handleClick} value='All' />
               <input type='button' className='btn m-1 alcohol' onClick={this.handleClick} value='alcohol' />
               <input type='button' className='btn m-1 baby-stuff' onClick={this.handleClick} value='baby-stuff' />
               <input type='button' className='btn m-1 clothes' onClick={this.handleClick} value='clothes' />
