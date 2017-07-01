@@ -1,12 +1,12 @@
 import firebase from 'firebase'
 
 const config = {
-  apiKey: 'AIzaSyDJJAuimDWqUJJCrSAUexG95PwoXSuCahw',
-  authDomain: 'boiling-heat-4669.firebaseapp.com',
-  databaseURL: 'https://boiling-heat-4669.firebaseio.com',
-  projectId: 'boiling-heat-4669',
-  storageBucket: 'boiling-heat-4669.appspot.com',
-  messagingSenderId: '925713084446'
+  apiKey: "AIzaSyDCMODJqnwMKRwS2xI1OVugW-G5PzzNraA",
+  authDomain: "hobby-budget.firebaseapp.com",
+  databaseURL: "https://hobby-budget.firebaseio.com",
+  projectId: 'hobby-budget',
+  storageBucket: "hobby-budget.appspot.com",
+  messagingSenderId: '816727543154'
 }
 
 firebase.initializeApp(config)

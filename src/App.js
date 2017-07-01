@@ -121,7 +121,7 @@ class App extends Component {
     for (let i = 0, cardLen = cards.length; i < cardLen; i++) {
       const cardYear = new Date(parseInt(cards[i].dataset.date, 10)).getFullYear()
 
-      if (filterYear === 'all') {
+      if (filterYear === 'All') {
         cards[i].parentNode.style.display = 'initial'
       } else if (parseInt(filterYear, 10) === parseInt(cardYear, 10)) {
         cards[i].parentNode.style.display = 'initial'
@@ -142,7 +142,7 @@ class App extends Component {
       const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November','December']
       cardMonth = monthNames[cardMonth]
 
-      if (filterMonth === 'all') {
+      if (filterMonth === 'All') {
         cards[i].parentNode.style.display = 'initial'
       } else if (filterMonth === cardMonth) {
         cards[i].parentNode.style.display = 'initial'
@@ -249,7 +249,7 @@ class App extends Component {
         <div id="logoutSection" className='row pt-1'>
           <div className='col-12 text-right'>
             You are logged in.
-            <button className='btn btn-info' id="btnLogout" onClick={this.handleLogout} >Logout</button>
+            <button className='btn btn-info ml-2' id="btnLogout" onClick={this.handleLogout} >Logout</button>
           </div>
         </div>
         <header className='row'>
