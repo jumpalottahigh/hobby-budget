@@ -17,7 +17,8 @@ class App extends Component {
       items: [],
       filterYears: [],
       filterMonths: [],
-      reportTotalMoneySpent: 0
+      reportTotalMoneySpent: 0,
+      configStartingDate: 0
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -192,7 +193,7 @@ class App extends Component {
       this.setState({
         items: newState
       })
-      
+
       // FILTERS AND REPORTS
       // Create filters based on item dates
       let cards = document.getElementsByClassName('card')
@@ -226,6 +227,15 @@ class App extends Component {
       })
     })
 
+    const configRef = firebase.database().ref('config')
+    configRef.on('value', (snapshot) => {
+      let config = snapshot.val()
+
+      this.setState({
+        configStartingDate: config.startingDate
+      })
+    })
+
     // Get initial login state
     this.loggedInState()
   }
@@ -234,31 +244,31 @@ class App extends Component {
   render () {
     return (
       <div className='container text-center'>
-        <div id="loginSection" className='row pt-1 pb-4 login'>
-          <h6 className='col-12 mt-3 text-warning'>You are not logged in. Your data won't be saved to Firebase.</h6>
-          <div className="col-12 col-sm-6 col-md-4 offset-md-4">
-            <input className='form-control mb-3' id="email" type='text' name='email' placeholder='Email' />
+        <div id='loginSection' className='row pt-1 pb-4 login bg-warning text-white'>
+          <h6 className='col-12 mt-3'>You are not logged in. Your data won't be saved to Firebase.</h6>
+          <div className='col-12 col-sm-6 col-md-4 offset-md-4'>
+            <input className='form-control mb-3' id='email' type='text' name='email' placeholder='Email' />
           </div>
-          <div className="col-12 col-sm-6 col-md-4 offset-md-4">
-            <input className='form-control mb-3' id="password" type='password' name='password' placeholder='Password' />
+          <div className='col-12 col-sm-6 col-md-4 offset-md-4'>
+            <input className='form-control mb-3' id='password' type='password' name='password' placeholder='Password' />
           </div>
-          <div className="col-12">
-            <button className='btn btn-primary' id="btnLogin" onClick={this.handleLogin} >Login</button>
+          <div className='col-12'>
+            <button className='btn btn-primary' id='btnLogin' onClick={this.handleLogin} >Login</button>
           </div>
         </div>
-        <div id="logoutSection" className='row pt-1'>
+        <div id='logoutSection' className='row pt-1'>
           <div className='col-12 text-right'>
             You are logged in.
-            <button className='btn btn-info ml-2' id="btnLogout" onClick={this.handleLogout} >Logout</button>
+            <button className='btn btn-info ml-2' id='btnLogout' onClick={this.handleLogout} >Logout</button>
           </div>
         </div>
-        <header className='row'>
-          <div className='col-12'>
-            <h1 className='mt-3 text-primary'>Budget Tracker</h1>
-          </div>
-        </header>
         <div className='row'>
-          <section className='col-12'>
+          <section className='col-12 py-4'>
+            <header className='row'>
+              <div className='col-12'>
+                <h1 className='text-primary'>Budget Tracker</h1>
+              </div>
+            </header>
             <form onSubmit={this.handleSubmit}>
               <div className='form-group col-12 col-md-6 offset-md-3'>
                 <input className='form-control mb-3' type='text' name='currentItem' placeholder='Item / note' onChange={this.handleChange} value={this.state.currentItem} />
@@ -278,7 +288,14 @@ class App extends Component {
               </div>
             </form>
           </section>
-          <section className='col-12'>
+          <section className='col-12 py-4 bg-info'>
+            <h2 className='col-12'>Quick stats:</h2>
+            <div className='col-12'>
+              <h4>Total money spent: <span className='text-white'>{this.state.reportTotalMoneySpent}</span></h4>
+              <h4>Data collected since: <span className='text-white'><Moment format='Do MMM YYYY'>{this.state.configStartingDate}</Moment></span></h4>
+            </div>
+          </section>
+          <section className='col-12 py-4'>
             <h2 className='col-12'>Filter by year:</h2>
             <div className='col-12 mb-2'>
               <input type='button' className='btn btn-secondary m-1' onClick={this.handleFilterByYear} value='All' />
@@ -298,7 +315,7 @@ class App extends Component {
               })}
             </div>
           </section>
-          <section className='row'>
+          <section className='col-xs-12'>
             <h2 className='col-12'>Filter by category:</h2>
             <div className='col-12 mb-2'>
               <input type='button' className='btn btn-secondary m-1' onClick={this.handleClick} value='All' />
@@ -324,17 +341,9 @@ class App extends Component {
               )
             })}
           </section>
-          <section className='col-12'>
-            <h2 className='col-12'>Reports and graphs:</h2>
-            <div className='col-12'>
-              <h4>Total money spent: {this.state.reportTotalMoneySpent}</h4>
-            </div>
-          </section>
         </div>
       </div>
     )
   }
 }
 export default App
-
-
