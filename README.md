@@ -1,6 +1,6 @@
 # :bar_chart: :moneybag: Hobby Budget
 
-Plan your budget. Add monthly allowance, track expenses by category.
+Simple budget tracker with Firebase and React. Add expenses by category and get nicely presented and informative charts.
 
 ![Hobby Budget](hobby-budget.png)
 
