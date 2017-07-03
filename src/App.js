@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './App.css'
 import firebase from './firebase.js'
 import Moment from 'react-moment'
+import Chart from './components/Chart.js'
 
 class App extends Component {
   //
@@ -18,7 +19,8 @@ class App extends Component {
       filterYears: [],
       filterMonths: [],
       reportTotalMoneySpent: 0,
-      configStartingDate: 0
+      configStartingDate: 0,
+      chartData: {}
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -27,6 +29,40 @@ class App extends Component {
     this.handleFilterByMonth = this.handleFilterByMonth.bind(this)
     this.handleLogin = this.handleLogin.bind(this)
     this.handleLogout = this.handleLogout.bind(this)
+  }
+
+  // TODO: connect the data coming from Firebase here
+  // Get chart data
+  getChartData () {
+    this.setState({
+      chartData: {
+        labels: [
+          'Boston', 'Worsester', 'Crapfest', 'Lowel', 'Sdest', 'Wesel'
+        ],
+        datasets: [
+          {
+            label: 'Population',
+            data: [
+              12324,
+              23476,
+              12565,
+              12233,
+              22331,
+              24536
+            ],
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.6)',
+              'rgba(54, 162, 235, 0.6)',
+              'rgba(255, 206, 86, 0.6)',
+              'rgba(75, 192, 192, 0.6)',
+              'rgba(153, 102, 255, 0.6)',
+              'rgba(255, 159, 64, 0.6)',
+              'rgba(255, 99, 132, 0.6)'
+            ]
+          }
+        ]
+      }
+    })
   }
 
   //
@@ -43,10 +79,9 @@ class App extends Component {
     this.filterByCategory(e.target.value)
   }
 
-  // Check login state
-  //Check if the user is logged in
+  // Check if the user is logged in
   loggedInState () {
-    firebase.auth().onAuthStateChanged(function(user) {
+    firebase.auth().onAuthStateChanged(function (user) {
       if (user) {
         let logoutSection = document.getElementById('logoutSection')
         logoutSection.style.display = 'block'
@@ -78,7 +113,6 @@ class App extends Component {
       } else {
         console.error(error)
       }
-      // window.location.reload()
     })
   }
 
@@ -140,7 +174,7 @@ class App extends Component {
 
     for (let i = 0, cardLen = cards.length; i < cardLen; i++) {
       let cardMonth = new Date(parseInt(cards[i].dataset.date, 10)).getMonth()
-      const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November','December']
+      const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
       cardMonth = monthNames[cardMonth]
 
       if (filterMonth === 'All') {
@@ -169,6 +203,11 @@ class App extends Component {
       currentItem: '',
       currentPrice: ''
     })
+  }
+
+  componentWillMount () {
+    // Get chart data
+    this.getChartData()
   }
 
   //
@@ -205,7 +244,7 @@ class App extends Component {
         let date = new Date(parseInt(cards[i].dataset.date, 10))
         let year = date.getFullYear()
         let month = date.getMonth()
-        let monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November','December']
+        let monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
         month = monthNames[month]
 
         if (!years.includes(year)) {
@@ -238,6 +277,9 @@ class App extends Component {
 
     // Get initial login state
     this.loggedInState()
+
+    // Get chart data
+    // this.getChartData()
   }
 
   // Render
@@ -287,6 +329,10 @@ class App extends Component {
                 <button className='btn btn-primary'>Add Item</button>
               </div>
             </form>
+          </section>
+          <section className='col-12 py-4'>
+            <Chart chartData={this.state.chartData} location='masschussets' />
+            {/* <Chart chartData={this.state.chartData} legendPosition='top' /> */}
           </section>
           <section className='col-12 py-4 bg-info'>
             <h2 className='col-12'>Quick stats:</h2>

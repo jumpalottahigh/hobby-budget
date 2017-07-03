@@ -1,15 +1,17 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
+  "name": "hobby-budget",
+  "version": "0.8.0",
   "private": true,
   "dependencies": {
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },
   "devDependencies": {
+    "chart.js": "^2.6.0",
     "firebase": "^4.1.2",
     "moment": "^2.18.1",
     "moment-timezone": "^0.5.13",
+    "react-chartjs-2": "^2.1.0",
     "react-moment": "^0.2.4",
     "react-scripts": "1.0.7"
   },
