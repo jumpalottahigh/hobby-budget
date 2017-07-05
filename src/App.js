@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import './App.css'
-import firebase from './firebase.js'
 import Moment from 'react-moment'
-import Chart from './components/Chart.js'
+import { Bar, Line, Pie } from 'react-chartjs-2'
+import firebase from './firebase.js'
+import './App.css'
 
 class App extends Component {
   //
@@ -29,40 +29,7 @@ class App extends Component {
     this.handleFilterByMonth = this.handleFilterByMonth.bind(this)
     this.handleLogin = this.handleLogin.bind(this)
     this.handleLogout = this.handleLogout.bind(this)
-  }
-
-  // TODO: connect the data coming from Firebase here
-  // Get chart data
-  getChartData () {
-    this.setState({
-      chartData: {
-        labels: [
-          'Boston', 'Worsester', 'Crapfest', 'Lowel', 'Sdest', 'Wesel'
-        ],
-        datasets: [
-          {
-            label: 'Population',
-            data: [
-              12324,
-              23476,
-              12565,
-              12233,
-              22331,
-              24536
-            ],
-            backgroundColor: [
-              'rgba(255, 99, 132, 0.6)',
-              'rgba(54, 162, 235, 0.6)',
-              'rgba(255, 206, 86, 0.6)',
-              'rgba(75, 192, 192, 0.6)',
-              'rgba(153, 102, 255, 0.6)',
-              'rgba(255, 159, 64, 0.6)',
-              'rgba(255, 99, 132, 0.6)'
-            ]
-          }
-        ]
-      }
-    })
+    this.modelAllPurchasesByCategory = this.modelAllPurchasesByCategory.bind(this)
   }
 
   //
@@ -121,10 +88,55 @@ class App extends Component {
     firebase.auth().signOut()
   }
 
-  // Remove item
-  removeItem (item) {
-    const itemRef = firebase.database().ref(`/items/${item.id}`)
-    itemRef.remove()
+  //
+  // Chart model creation
+  //
+  modelAllPurchasesByCategory () {
+    // Data to extract
+    let labels = []
+    let backgroundColors = []
+    let allPurchasesByCategory = []
+    let currentCategoryTotal = 0
+
+    // Itirate the data and extract labels and datasets
+    for (let i = 0, len = this.state.items.length; i < len; i++) {
+      let label = this.state.items[i].category
+      // Extract label categories and colors for them
+      if (!labels.includes(label)) {
+        labels.push(label)
+        // Generate random color for each label
+        backgroundColors.push(`rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, 0.6)`)
+      }
+    }
+
+    // Calculate total spendings per category
+    for (let i = 0, len = labels.length; i < len; i++) {
+      // Reset itirator states
+      currentCategoryTotal = 0
+
+      for (let j = 0, leng = this.state.items.length; j < leng; j++) {
+        // Calculate totals by category
+        if (labels[i] === this.state.items[j].category) {
+          currentCategoryTotal += parseInt(this.state.items[j].price)
+        }
+      }
+      // Push total to result collection
+      allPurchasesByCategory.push(currentCategoryTotal)
+    }
+
+    // Must return an object literal as required by setState
+    return {
+      chartData: {
+          labels: labels,
+          datasets: [
+            {
+              data: allPurchasesByCategory,
+              backgroundColor: backgroundColors
+            }
+          ]
+        }
+    }
+
   }
 
   //
@@ -205,15 +217,8 @@ class App extends Component {
     })
   }
 
+  // Lifecycle method: will mount
   componentWillMount () {
-    // Get chart data
-    this.getChartData()
-  }
-
-  //
-  // Component mounted
-  //
-  componentDidMount () {
     const itemsRef = firebase.database().ref('items')
     itemsRef.on('value', (snapshot) => {
       let items = snapshot.val()
@@ -264,6 +269,9 @@ class App extends Component {
         filterMonths: months,
         reportTotalMoneySpent: totalMoney
       })
+
+      // Set initial chartData state to a model
+      this.setState(this.modelAllPurchasesByCategory())
     })
 
     const configRef = firebase.database().ref('config')
@@ -277,15 +285,18 @@ class App extends Component {
 
     // Get initial login state
     this.loggedInState()
+  }
 
-    // Get chart data
-    // this.getChartData()
+  //
+  // Component mounted
+  //
+  componentDidMount () {
   }
 
   // Render
   render () {
     return (
-      <div className='container text-center'>
+      <div className='container-fluid text-center'>
         <div id='loginSection' className='row pt-1 pb-4 login bg-warning text-white'>
           <h6 className='col-12 mt-3'>You are not logged in. Your data won't be saved to Firebase.</h6>
           <div className='col-12 col-sm-6 col-md-4 offset-md-4'>
@@ -304,7 +315,7 @@ class App extends Component {
             <button className='btn btn-info ml-2' id='btnLogout' onClick={this.handleLogout} >Logout</button>
           </div>
         </div>
-        <div className='row'>
+        <div>
           <section className='col-12 py-4'>
             <header className='row'>
               <div className='col-12'>
@@ -330,9 +341,21 @@ class App extends Component {
               </div>
             </form>
           </section>
+
+          {/*TODO: add props to chart - title, legend w/e*/}
           <section className='col-12 py-4'>
-            <Chart chartData={this.state.chartData} location='masschussets' />
-            {/* <Chart chartData={this.state.chartData} legendPosition='top' /> */}
+            <h6>Total spendings by category</h6>
+            <Pie
+              data={this.state.chartData}
+            />
+            {/*
+            <Line
+              data={this.state.chartData}
+            />
+            <Bar
+              data={this.state.chartData}
+            />
+            */}
           </section>
           <section className='col-12 py-4 bg-info'>
             <h2 className='col-12'>Quick stats:</h2>
@@ -361,7 +384,7 @@ class App extends Component {
               })}
             </div>
           </section>
-          <section className='col-xs-12'>
+          <section className='row'>
             <h2 className='col-12'>Filter by category:</h2>
             <div className='col-12 mb-2'>
               <input type='button' className='btn btn-secondary m-1' onClick={this.handleClick} value='All' />
