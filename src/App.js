@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Moment from 'react-moment'
-import { Bar, Line, Pie } from 'react-chartjs-2'
+import { Bar, Pie } from 'react-chartjs-2'
 import firebase from './firebase.js'
 import './App.css'
 
@@ -20,8 +20,11 @@ class App extends Component {
       filterMonths: [],
       reportTotalMoneySpent: 0,
       configStartingDate: 0,
+      // Chart model data and options
       chartData: {},
-      chartOptions: {}
+      chartOptions: {},
+      // Chart updates
+      updateChartYear: 'All'
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -30,7 +33,8 @@ class App extends Component {
     this.handleFilterByMonth = this.handleFilterByMonth.bind(this)
     this.handleLogin = this.handleLogin.bind(this)
     this.handleLogout = this.handleLogout.bind(this)
-    this.modelAllPurchasesByCategory = this.modelAllPurchasesByCategory.bind(this)
+    // Chart models
+    this.updateChartModel = this.updateChartModel.bind(this)
   }
 
   //
@@ -38,8 +42,15 @@ class App extends Component {
   //
   // Input changes
   handleChange (e) {
+    let name = e.target.name
+
     this.setState({
       [e.target.name]: e.target.value
+    }, () => {
+      // Custom handle for updating the chart based on selections
+      if (name === 'updateChartYear') {
+        this.updateChartModel()
+      }
     })
   }
 
@@ -92,11 +103,11 @@ class App extends Component {
   //
   // Chart model creation
   //
-  modelAllPurchasesByCategory () {
+  updateChartModel () {
     // Data to extract
     let labels = []
     let backgroundColors = []
-    let allPurchasesByCategory = []
+    let results = []
     let currentCategoryTotal = 0
 
     // Itirate the data and extract labels and datasets
@@ -117,35 +128,50 @@ class App extends Component {
 
       for (let j = 0, leng = this.state.items.length; j < leng; j++) {
         // Calculate totals by category
-        if (labels[i] === this.state.items[j].category) {
-          currentCategoryTotal += parseInt(this.state.items[j].price)
-        }
-      }
-      // Push total to result collection
-      allPurchasesByCategory.push(currentCategoryTotal)
-    }
+        // For all purchases
+        if (this.state.updateChartYear == 'All') {
+          if (labels[i] === this.state.items[j].category) {
+            currentCategoryTotal += parseInt(this.state.items[j].price, 10)
+          }
+        // For year specific purchases
+      } else {
+          console.log(parseInt(this.state.updateChartYear, 10))
+          console.log(new Date(parseInt(this.state.items[j].timestamp, 10)).getFullYear())
 
-    // Must return an object literal as required by setState
-    return {
-      // Chart data object is required
-      chartData: {
-          labels: labels,
-          datasets: [
-            {
-              data: allPurchasesByCategory,
-              backgroundColor: backgroundColors
+          // && parseInt(this.state.updateChartYear, 10) === parseInt(new Date(this.state.items[j].timestamp).getFullYear(), 10
+          if (parseInt(this.state.updateChartYear, 10) === new Date(parseInt(this.state.items[j].timestamp, 10)).getFullYear()) {
+            if (labels[i] === this.state.items[j].category) {
+              currentCategoryTotal += parseInt(this.state.items[j].price, 10)
             }
-          ]
-        },
-        // This object is customizable and not required to display the chart
-        chartOptions: {
-          title: {
-            display: true,
-            text: 'Total spendings by category'
           }
         }
+      }
+      console.log(currentCategoryTotal)
+      // Push total to result collection
+      results.push(currentCategoryTotal)
     }
+    console.log(results)
 
+    // Must return an object literal as required by setState
+    this.setState({
+      // Chart data object is required
+      chartData: {
+        labels: labels,
+        datasets: [
+          {
+            data: results,
+            backgroundColor: backgroundColors
+          }
+        ]
+      },
+      // This object is customizable and not required to display the chart
+      chartOptions: {
+        title: {
+          display: true,
+          text: `Total spendings by category for ${this.state.updateChartYear}`
+        }
+      }
+    })
   }
 
   //
@@ -280,7 +306,7 @@ class App extends Component {
       })
 
       // Set initial chartData state to a model
-      this.setState(this.modelAllPurchasesByCategory())
+      this.updateChartModel()
     })
 
     const configRef = firebase.database().ref('config')
@@ -356,6 +382,14 @@ class App extends Component {
               data={this.state.chartData}
               options={this.state.chartOptions}
             />
+            <select className='form-control mb-3' name='updateChartYear' onChange={this.handleChange} value={this.state.updateChartYear}>
+              <option key='All' value='All'>All</option>
+              {this.state.filterYears.map((item) => {
+                return (
+                  <option key={item} value={item}>{item}</option>
+                )
+              })}
+            </select>
             <Bar
               data={this.state.chartData}
               options={{legend: {display: false}}}
