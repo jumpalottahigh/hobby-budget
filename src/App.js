@@ -20,7 +20,8 @@ class App extends Component {
       filterMonths: [],
       reportTotalMoneySpent: 0,
       configStartingDate: 0,
-      chartData: {}
+      chartData: {},
+      chartOptions: {}
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -126,6 +127,7 @@ class App extends Component {
 
     // Must return an object literal as required by setState
     return {
+      // Chart data object is required
       chartData: {
           labels: labels,
           datasets: [
@@ -134,6 +136,13 @@ class App extends Component {
               backgroundColor: backgroundColors
             }
           ]
+        },
+        // This object is customizable and not required to display the chart
+        chartOptions: {
+          title: {
+            display: true,
+            text: 'Total spendings by category'
+          }
         }
     }
 
@@ -335,27 +344,22 @@ class App extends Component {
                   <option value='gifts'>Gifts</option>
                   <option value='home-upgrades'>Home upgrades</option>
                   <option value='junk-food'>Junk food</option>
-                  <option value='makeup'>Make up</option>
+                  <option value='makeup'>Make up, jewelry and candles</option>
                 </select>
                 <button className='btn btn-primary'>Add Item</button>
               </div>
             </form>
           </section>
 
-          {/*TODO: add props to chart - title, legend w/e*/}
           <section className='col-12 py-4'>
-            <h6>Total spendings by category</h6>
             <Pie
               data={this.state.chartData}
-            />
-            {/*
-            <Line
-              data={this.state.chartData}
+              options={this.state.chartOptions}
             />
             <Bar
               data={this.state.chartData}
+              options={{legend: {display: false}}}
             />
-            */}
           </section>
           <section className='col-12 py-4 bg-info'>
             <h2 className='col-12'>Quick stats:</h2>
