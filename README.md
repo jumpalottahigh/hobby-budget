@@ -2,7 +2,7 @@
 
 Simple budget tracker with Firebase and React. Add expenses by category and get nicely presented and informative charts.
 
-![Hobby Budget](hobby-budget.png)
+![Budget Tracker](budget-tracker-views.png)
 
 ## Social Links
 
