@@ -135,10 +135,6 @@ class App extends Component {
           }
         // For year specific purchases
       } else {
-          console.log(parseInt(this.state.updateChartYear, 10))
-          console.log(new Date(parseInt(this.state.items[j].timestamp, 10)).getFullYear())
-
-          // && parseInt(this.state.updateChartYear, 10) === parseInt(new Date(this.state.items[j].timestamp).getFullYear(), 10
           if (parseInt(this.state.updateChartYear, 10) === new Date(parseInt(this.state.items[j].timestamp, 10)).getFullYear()) {
             if (labels[i] === this.state.items[j].category) {
               currentCategoryTotal += parseInt(this.state.items[j].price, 10)
@@ -146,11 +142,9 @@ class App extends Component {
           }
         }
       }
-      console.log(currentCategoryTotal)
       // Push total to result collection
       results.push(currentCategoryTotal)
     }
-    console.log(results)
 
     // Must return an object literal as required by setState
     this.setState({
@@ -365,12 +359,14 @@ class App extends Component {
                   <option value='alcohol'>Alcohol</option>
                   <option value='baby-stuff'>Baby stuff</option>
                   <option value='clothes'>Clothes</option>
+                  <option value='drone'>Drones &amp; parts</option>
                   <option value='electronics'>Electronics</option>
                   <option value='entertainment'>Entertainment</option>
                   <option value='gifts'>Gifts</option>
+                  <option value='home-decor'>Home decor &amp; candles</option>
                   <option value='home-upgrades'>Home upgrades</option>
                   <option value='junk-food'>Junk food</option>
-                  <option value='makeup'>Make up, jewelry and candles</option>
+                  <option value='makeup'>Make up &amp; jewelry</option>
                 </select>
                 <button className='btn btn-primary'>Add Item</button>
               </div>
