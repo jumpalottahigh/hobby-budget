@@ -432,7 +432,7 @@ class App extends Component {
               <input type='button' className='btn m-1 junk-food' onClick={this.handleClick} value='junk-food' />
               <input type='button' className='btn m-1 makeup' onClick={this.handleClick} value='makeup' />
             </div>
-            {this.state.items.map((item) => {
+            {this.state.items.slice(0).reverse().map((item) => {
               return (
                 <div className='col-12 col-sm-6 col-md-6 col-lg-3 mb-3' key={item.id}>
                   <div className='card' data-category={item.category} data-date={item.timestamp} data-name={item.name} data-price={item.price} key={item.id}>
