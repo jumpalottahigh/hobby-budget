@@ -1,10 +1,14 @@
 header {
   display: grid;
   background-color: bisque;
-  grid-template-columns: 200px 1fr 100px;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
   justify-content: center;
   align-items: center;
+}
+
+header a {
+  text-align: center;
 }
 
 .brand {

@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import './Header.css'
-import firebase from '../../firebase'
 class Header extends Component {
   constructor() {
     super()
@@ -11,7 +10,7 @@ class Header extends Component {
   render() {
     return (
       <header>
-        <a className="brand" href="/">
+        <Link className="brand" to="/">
           <h4>
             <span role="img" aria-label="money bag emoji">
               💰
@@ -19,10 +18,10 @@ class Header extends Component {
             {` `}
             Budget Tracker
           </h4>
-        </a>
+        </Link>
         <nav>
           <Link to="/">Add</Link>
-          <Link to="/charts">Charts</Link>
+          <Link to="/stats">Stats</Link>
         </nav>
         <Link className="login" to="/login">
           Account

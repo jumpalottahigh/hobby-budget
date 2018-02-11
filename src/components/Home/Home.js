@@ -1,8 +1,18 @@
 import React, { Component, Fragment } from 'react'
 import firebase from '../../firebase'
 import { auth } from '../../firebase'
+import Button from '../Button/Button'
+import styled from 'styled-components'
 
 import './Home.css'
+
+const Form = styled.form`
+  display: grid;
+  justify-content: center;
+  grid-gap: 10px;
+  grid-template-rows: repeat(4, 45px);
+`
+
 class Home extends Component {
   constructor() {
     super()
@@ -11,13 +21,43 @@ class Home extends Component {
       currentPrice: '',
       currentCategory: 'home-upgrades',
       timestamp: '',
-      userIsLoggedIn: false,
-      configStartingDate: '',
-      lastThreePurchases: []
+      userIsLoggedIn: false
     }
   }
 
+  // Input changes
+  handleChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  }
+
+  // Form submission
+  handleSubmit = e => {
+    e.preventDefault()
+
+    // Both fields need to be filled in for successful submit
+    if (this.state.currentItem === '' || this.state.currentPrice === '') {
+      return
+    }
+
+    const itemsRef = firebase.database().ref('items')
+    const item = {
+      name: this.state.currentItem,
+      price: this.state.currentPrice,
+      category: this.state.currentCategory,
+      timestamp: Date.now()
+    }
+
+    itemsRef.push(item)
+    this.setState({
+      currentItem: '',
+      currentPrice: ''
+    })
+  }
+
   componentWillMount() {
+    // Get user state
     auth.onAuthStateChanged(user => {
       if (user) {
         this.setState({ userIsLoggedIn: true })
@@ -44,27 +84,16 @@ class Home extends Component {
         items: newState
       })
     })
-
-    const configRef = firebase.database().ref('config')
-    configRef.on('value', snapshot => {
-      let config = snapshot.val()
-
-      this.setState({
-        configStartingDate: config.startingDate
-      })
-    })
   }
 
   render() {
-    console.log(this.state)
     return (
       <section>
         {this.state.userIsLoggedIn ? (
           <Fragment>
             <h2>Add a purchase:</h2>
-            <form onSubmit={this.handleSubmit}>
+            <Form onSubmit={this.handleSubmit}>
               <input
-                className="form-control mb-3"
                 type="text"
                 name="currentItem"
                 placeholder="Item / note"
@@ -72,7 +101,6 @@ class Home extends Component {
                 value={this.state.currentItem}
               />
               <input
-                className="form-control mb-3"
                 type="text"
                 name="currentPrice"
                 placeholder="Price"
@@ -80,7 +108,6 @@ class Home extends Component {
                 value={this.state.currentPrice}
               />
               <select
-                className="form-control mb-3"
                 name="currentCategory"
                 onChange={this.handleChange}
                 value={this.state.currentCategory}
@@ -97,8 +124,8 @@ class Home extends Component {
                 <option value="junk-food">Junk food</option>
                 <option value="makeup">Make up &amp; jewelry</option>
               </select>
-              <button className="btn btn-primary">Add Item</button>
-            </form>
+              <Button>Add Item</Button>
+            </Form>
           </Fragment>
         ) : (
           <Fragment>You have to login to add items.</Fragment>
