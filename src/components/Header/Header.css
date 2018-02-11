@@ -11,7 +11,8 @@ header {
   text-decoration: none;
 }
 
-.brand:hover {
+.brand:hover,
+.login:hover {
   color: royalblue;
   background-color: transparent;
 }

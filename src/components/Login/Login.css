@@ -1,0 +1,15 @@
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+form label {
+  margin-bottom: 1rem;
+}
+
+.error {
+  color: red;
+  padding: 1rem;
+}

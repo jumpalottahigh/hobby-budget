@@ -1,8 +1,13 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import './Header.css'
-import Button from '../Button/Button'
+import firebase from '../../firebase'
 class Header extends Component {
+  constructor() {
+    super()
+    this.state = {}
+  }
+
   render() {
     return (
       <header>
@@ -16,10 +21,12 @@ class Header extends Component {
           </h4>
         </a>
         <nav>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
+          <Link to="/">Add</Link>
+          <Link to="/charts">Charts</Link>
         </nav>
-        <Button>Login</Button>
+        <Link className="login" to="/login">
+          Account
+        </Link>
       </header>
     )
   }
