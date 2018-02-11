@@ -23,6 +23,18 @@ export default class Stats extends Component {
     }
   }
 
+  handleDelete = e => {
+    const key = e.target.dataset.id
+    const confirmed = window.confirm(
+      'Are you sure you want to delete this item?'
+    )
+
+    if (confirmed) {
+      const itemsRef = firebase.database().ref('items')
+      itemsRef.child(key).remove()
+    }
+  }
+
   componentWillMount = () => {
     // Get starting date
     const configRef = firebase.database().ref('config')
@@ -82,10 +94,21 @@ export default class Stats extends Component {
                   className="card"
                   data-category={item.category}
                   data-date={item.timestamp}
+                  data-id={item.id}
                   data-name={item.name}
                   data-price={item.price}
                 >
-                  <h5 className={`badge ${item.category}`}>{item.category}</h5>
+                  <h5 className={`badge ${item.category}`}>
+                    {item.category}
+                    <span
+                      role="img"
+                      aria-label="delete"
+                      data-id={item.id}
+                      onClick={this.handleDelete}
+                    >
+                      🗑️
+                    </span>
+                  </h5>
                   <h5>{item.name}</h5>
                   <p>
                     Price: {item.price} | Date:{' '}

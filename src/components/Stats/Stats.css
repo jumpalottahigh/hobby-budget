@@ -11,6 +11,12 @@
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   width: 100%;
+  font-size: 1.2rem;
+}
+
+.card .badge span {
+  position: absolute;
+  right: 20px;
 }
 
 .card h5,
@@ -47,9 +53,4 @@
 }
 .makeup {
   background-color: #c3c3e5;
-}
-
-h2,
-h4 {
-  margin: 0;
 }
