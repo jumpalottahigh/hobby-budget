@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react'
 import Moment from 'react-moment'
 import firebase from '../../firebase'
 import styled from 'styled-components'
+import Button from '../Button/Button'
 
 import './Stats.css'
 
@@ -19,9 +20,21 @@ export default class Stats extends Component {
     super()
     this.state = {
       configStartingDate: '',
-      items: []
+      items: [],
+      displayItems: false
     }
   }
+
+  // filterLastMonth = () => {
+  //   const itemsRef = firebase.database().ref('items')
+
+  //   itemsRef
+  //     .orderByChild('category')
+  //     .limitToLast(10)
+  //     .on('value', snap => {
+  //       console.log(snap.val())
+  //     })
+  // }
 
   handleDelete = e => {
     const key = e.target.dataset.id
@@ -33,6 +46,14 @@ export default class Stats extends Component {
       const itemsRef = firebase.database().ref('items')
       itemsRef.child(key).remove()
     }
+  }
+
+  handleShowAllItems = () => {
+    let opposite = !this.state.displayItems
+
+    this.setState({
+      displayItems: opposite
+    })
   }
 
   componentWillMount = () => {
@@ -82,42 +103,50 @@ export default class Stats extends Component {
               />
             </h4>
           )}
+          <Button onClick={this.handleShowAllItems}>
+            {this.state.displayItems ? 'Hide ' : 'Show '}All Purchases
+          </Button>
+          {/* <Button onClick={this.filterLastMonth}>Show last month</Button> */}
         </section>
-        <CardHolder>
-          {this.state.items
-            .slice(0)
-            .reverse()
-            .map(item => {
-              return (
-                <div
-                  key={item.id}
-                  className="card"
-                  data-category={item.category}
-                  data-date={item.timestamp}
-                  data-id={item.id}
-                  data-name={item.name}
-                  data-price={item.price}
-                >
-                  <h5 className={`badge ${item.category}`}>
-                    {item.category}
-                    <span
-                      role="img"
-                      aria-label="delete"
-                      data-id={item.id}
-                      onClick={this.handleDelete}
-                    >
-                      🗑️
-                    </span>
-                  </h5>
-                  <h5>{item.name}</h5>
-                  <p>
-                    Price: {item.price} | Date:{' '}
-                    <Moment format="Do MMM YYYY">{item.timestamp}</Moment>
-                  </p>
-                </div>
-              )
-            })}
-        </CardHolder>
+        {this.state.displayItems ? (
+          <CardHolder>
+            <h2>All purchases:</h2>
+            {this.state.items
+              .slice(0)
+              .reverse()
+              .map(item => {
+                console.log('runs')
+                return (
+                  <div
+                    key={item.id}
+                    className="card"
+                    data-category={item.category}
+                    data-date={item.timestamp}
+                    data-id={item.id}
+                    data-name={item.name}
+                    data-price={item.price}
+                  >
+                    <h5 className={`badge ${item.category}`}>
+                      {item.category}
+                      <span
+                        role="img"
+                        aria-label="delete"
+                        data-id={item.id}
+                        onClick={this.handleDelete}
+                      >
+                        🗑️
+                      </span>
+                    </h5>
+                    <h5>{item.name}</h5>
+                    <p>
+                      Price: {item.price} | Date:{' '}
+                      <Moment format="Do MMM YYYY">{item.timestamp}</Moment>
+                    </p>
+                  </div>
+                )
+              })}
+          </CardHolder>
+        ) : null}
       </Fragment>
     )
   }

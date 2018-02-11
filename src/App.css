@@ -17,8 +17,10 @@ body {
   min-height: 80vh;
 }
 
-header {
-  /* padding: 0 2rem; */
+section {
+  display: grid;
+  grid-gap: 10px;
+  text-align: center;
 }
 
 section,
