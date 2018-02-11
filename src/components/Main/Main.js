@@ -5,7 +5,7 @@ import About from '../About/About'
 import NotFound from '../NotFound/NotFound'
 
 const Main = () => (
-  <main>
+  <main className="wrapper">
     <Switch>
       <Route exact path="/" component={Home} />
       <Route path="/about" component={About} />

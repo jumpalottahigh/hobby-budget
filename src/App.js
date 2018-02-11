@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import './App.css'
 
 // UI Components
@@ -9,11 +9,11 @@ import Footer from './components/Footer/Footer'
 export class App extends Component {
   render() {
     return (
-      <div>
+      <Fragment>
         <Header />
         <Main />
         <Footer />
-      </div>
+      </Fragment>
     )
   }
 }
