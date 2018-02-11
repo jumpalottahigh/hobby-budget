@@ -13,10 +13,24 @@ body {
 .wrapper {
   display: grid;
   grid-column: 1 / -1;
+  min-height: 80vh;
 }
 
-header,
+header {
+  padding: 0 2rem;
+}
+
 section,
 footer {
   padding: 2rem;
+}
+
+a {
+  color: royalblue;
+}
+
+a:hover {
+  transition: 425ms;
+  color: white;
+  background-color: royalblue;
 }
