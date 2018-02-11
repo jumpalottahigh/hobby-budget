@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import './Header.css'
-import logo from './logo.png'
 
 class Header extends Component {
   render() {
@@ -9,8 +8,13 @@ class Header extends Component {
       <header className="header">
         <nav className="brand">
           <a href="/">
-            <img src={logo} alt="Georgi Yanev logo" />
-            <h4>@jumpalottahigh</h4>
+            <h4>
+              <span role="img" aria-label="money bag emoji">
+                💰
+              </span>
+              {` `}
+              Budget Tracker
+            </h4>
           </a>
         </nav>
         <nav className="main">

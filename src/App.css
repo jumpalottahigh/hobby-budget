@@ -1,17 +1,22 @@
-/* make a grid */
-.wrapper {
-  max-width: 940px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  /* grid-gap: 1rem; */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
-.header,
-.footer {
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.wrapper {
+  display: grid;
   grid-column: 1 / -1;
 }
 
-section {
-  padding: 2rem 1rem;
+header,
+section,
+footer {
+  padding: 2rem;
 }
