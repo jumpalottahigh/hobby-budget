@@ -95,7 +95,7 @@ export default class Charts extends Component {
   render() {
     return (
       <Fragment>
-        <Container>Chart1</Container>
+        <Container>Chart1Test</Container>
         <Container>Chart2</Container>
       </Fragment>
     )
