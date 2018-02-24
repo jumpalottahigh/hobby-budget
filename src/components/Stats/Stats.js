@@ -4,7 +4,26 @@ import firebase from '../../firebase'
 import styled from 'styled-components'
 import Button from '../Button/Button'
 
+import Card from './Card/Card'
+
 import './Stats.css'
+
+const Container = styled.section`
+  padding: 2rem 1rem;
+  grid-template-columns: repeat(3, 1fr);
+
+  h4 {
+    grid-column: span 3;
+  }
+
+  @media (min-width: 991px) {
+    grid-template-columns: repeat(6, 1fr);
+
+    h4 {
+      grid-column: span 6;
+    }
+  }
+`
 
 const CardHolder = styled.section`
   grid-gap: 20px;
@@ -12,6 +31,10 @@ const CardHolder = styled.section`
 
   @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr 1fr;
+
+    h2 {
+      grid-column: span 3;
+    }
   }
 `
 
@@ -21,20 +44,12 @@ export default class Stats extends Component {
     this.state = {
       configStartingDate: '',
       items: [],
-      displayItems: false
+      currentFilter: '',
+      filteredItems: [],
+      allCategories: [],
+      allYears: []
     }
   }
-
-  // filterLastMonth = () => {
-  //   const itemsRef = firebase.database().ref('items')
-
-  //   itemsRef
-  //     .orderByChild('category')
-  //     .limitToLast(10)
-  //     .on('value', snap => {
-  //       console.log(snap.val())
-  //     })
-  // }
 
   handleDelete = e => {
     const key = e.target.dataset.id
@@ -48,11 +63,33 @@ export default class Stats extends Component {
     }
   }
 
-  handleShowAllItems = () => {
-    let opposite = !this.state.displayItems
+  handleFilterByCategory = e => {
+    let cat = e.target.dataset.category
+    let filteredItems = []
+
+    if (cat !== 'none') {
+      filteredItems = this.state.items.filter(item => item.category === cat)
+    }
 
     this.setState({
-      displayItems: opposite
+      currentFilter: cat,
+      filteredItems
+    })
+  }
+
+  handleFilterByYear = e => {
+    let year = new Date(e.target.dataset.timestamp).getFullYear()
+    let filteredItems = []
+
+    if (year !== 'none') {
+      filteredItems = this.state.items.filter(
+        item => new Date(item.timestamp).getFullYear() === year
+      )
+    }
+
+    this.setState({
+      currentFilter: year,
+      filteredItems
     })
   }
 
@@ -73,19 +110,40 @@ export default class Stats extends Component {
     itemsRef.on('value', snapshot => {
       let items = snapshot.val()
       let newState = []
+      let allCategories = []
+      let allYears = []
 
       for (let item in items) {
+        // Extract short hands
+        let { category, name, price, timestamp } = items[item]
+        // Push all purchases to state
         newState.push({
           id: item,
-          name: items[item].name,
-          price: items[item].price,
-          category: items[item].category,
-          timestamp: items[item].timestamp
+          name,
+          price,
+          category,
+          timestamp
         })
+
+        // Get all categories
+        if (!allCategories.includes(category)) {
+          allCategories.push(category)
+        }
+
+        // Get all years
+        let year = new Date(timestamp).getFullYear()
+        if (!allYears.includes(year)) {
+          allYears.push(year)
+        }
       }
 
+      // Sort categories alphabetically
+      allCategories.sort()
+
       this.setState({
-        items: newState
+        items: newState,
+        allCategories,
+        allYears
       })
     })
   }
@@ -93,7 +151,7 @@ export default class Stats extends Component {
   render() {
     return (
       <Fragment>
-        <section>
+        <Container>
           {this.state.configStartingDate && (
             <h4>
               Data collected since:{' '}
@@ -103,50 +161,83 @@ export default class Stats extends Component {
               />
             </h4>
           )}
-          <Button onClick={this.handleShowAllItems}>
-            {this.state.displayItems ? 'Hide ' : 'Show '}All Purchases
-          </Button>
-          {/* <Button onClick={this.filterLastMonth}>Show last month</Button> */}
-        </section>
-        {this.state.displayItems ? (
+          {/* Filter by category */}
+          {this.state.allCategories && (
+            <Fragment>
+              <h4>Filter by category:</h4>
+              <Button
+                className="none"
+                data-category="none"
+                onClick={this.handleFilterByCategory}
+              >
+                none
+              </Button>
+              {this.state.allCategories.map((cat, index) => (
+                <Button
+                  key={index}
+                  className={cat}
+                  data-category={cat}
+                  onClick={this.handleFilterByCategory}
+                >
+                  {cat}
+                </Button>
+              ))}
+            </Fragment>
+          )}
+          {/* Filter by year */}
+          {this.state.allYears && (
+            <Fragment>
+              <h4>Filter by year:</h4>
+              <Button data-timestamp="none" onClick={this.handleFilterByYear}>
+                none
+              </Button>
+              {this.state.allYears.map((year, index) => (
+                <Button
+                  key={index}
+                  data-timestamp={year}
+                  onClick={this.handleFilterByYear}
+                >
+                  {year}
+                </Button>
+              ))}
+            </Fragment>
+          )}
+        </Container>
+
+        {/* If no filtered items, show all items */}
+        {!this.state.filteredItems.length ? (
           <CardHolder>
             <h2>All purchases:</h2>
             {this.state.items
               .slice(0)
               .reverse()
               .map(item => {
-                console.log('runs')
                 return (
-                  <div
+                  <Card
                     key={item.id}
-                    className="card"
-                    data-category={item.category}
-                    data-date={item.timestamp}
-                    data-id={item.id}
-                    data-name={item.name}
-                    data-price={item.price}
-                  >
-                    <h5 className={`badge ${item.category}`}>
-                      {item.category}
-                      <span
-                        role="img"
-                        aria-label="delete"
-                        data-id={item.id}
-                        onClick={this.handleDelete}
-                      >
-                        🗑️
-                      </span>
-                    </h5>
-                    <h5>{item.name}</h5>
-                    <p>
-                      Price: {item.price} | Date:{' '}
-                      <Moment format="Do MMM YYYY">{item.timestamp}</Moment>
-                    </p>
-                  </div>
+                    handleDelete={this.handleDelete}
+                    {...item}
+                  />
                 )
               })}
           </CardHolder>
-        ) : null}
+        ) : (
+          <CardHolder>
+            <h2>Filtered items: {this.state.currentFilter}</h2>
+            {this.state.filteredItems
+              .slice(0)
+              .reverse()
+              .map(item => {
+                return (
+                  <Card
+                    key={item.id}
+                    handleDelete={this.handleDelete}
+                    {...item}
+                  />
+                )
+              })}
+          </CardHolder>
+        )}
       </Fragment>
     )
   }

@@ -12,7 +12,8 @@ const Button = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: #3155c1;
+    color: #000;
+    opacity: 0.85;
   }
 `
 export default Button

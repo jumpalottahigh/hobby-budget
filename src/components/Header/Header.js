@@ -1,6 +1,13 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import './Header.css'
+
+const activeStyle = {
+  color: 'red',
+  fontWeight: 600,
+  fontSize: '0.95rem'
+}
+
 class Header extends Component {
   constructor() {
     super()
@@ -20,12 +27,17 @@ class Header extends Component {
           </h4>
         </Link>
         <nav>
-          <Link to="/">Add</Link>
-          <Link to="/stats">Stats</Link>
+          <NavLink to="/">Add</NavLink>
+          <NavLink to="/stats" activeStyle={activeStyle}>
+            Stats
+          </NavLink>
+          <NavLink to="/charts" activeStyle={activeStyle}>
+            Charts
+          </NavLink>
         </nav>
-        <Link className="login" to="/login">
+        <NavLink className="login" to="/login" activeStyle={activeStyle}>
           Account
-        </Link>
+        </NavLink>
       </header>
     )
   }

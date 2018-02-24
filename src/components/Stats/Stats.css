@@ -12,11 +12,13 @@
   border-top-right-radius: 10px;
   width: 100%;
   font-size: 1.2rem;
+  position: relative;
 }
 
 .card .badge span {
   position: absolute;
-  right: 20px;
+  right: 0;
+  cursor: pointer;
 }
 
 .card h5,
@@ -24,6 +26,9 @@
   margin: 0;
 }
 
+.none {
+  background-color: #cecece;
+}
 .alcohol {
   background-color: #fff0aa;
 }
@@ -47,6 +52,9 @@
 }
 .home-upgrades {
   background-color: #ffc3ce;
+}
+.home-decor {
+  background-color: #912cbb;
 }
 .junk-food {
   background-color: #ffcc99;
