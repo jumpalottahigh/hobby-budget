@@ -1,0 +1,26 @@
+header {
+  display: grid;
+  background-color: bisque;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+header a {
+  text-align: center;
+}
+
+.brand {
+  text-decoration: none;
+}
+
+.brand:hover,
+.login:hover {
+  color: royalblue;
+  background-color: transparent;
+}
+
+nav a {
+  margin: 0 1rem;
+}

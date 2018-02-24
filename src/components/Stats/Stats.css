@@ -1,0 +1,64 @@
+.card {
+  height: 150px;
+  box-shadow: 0 0 5px #222;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card .badge {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+.card .badge span {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+
+.card h5,
+.card p {
+  margin: 0;
+}
+
+.none {
+  background-color: #cecece;
+}
+.alcohol {
+  background-color: #fff0aa;
+}
+.baby-stuff {
+  background-color: #98eded;
+}
+.clothes {
+  background-color: #cccccc;
+}
+.drone {
+  background-color: #1b8d87;
+}
+.electronics {
+  background-color: #006699;
+}
+.entertainment {
+  background-color: #d3649f;
+}
+.gifts {
+  background-color: #99cc99;
+}
+.home-upgrades {
+  background-color: #ffc3ce;
+}
+.home-decor {
+  background-color: #912cbb;
+}
+.junk-food {
+  background-color: #ffcc99;
+}
+.makeup {
+  background-color: #c3c3e5;
+}
