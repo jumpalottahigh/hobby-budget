@@ -1,8 +1,7 @@
 import React, { Component, Fragment } from 'react'
-import Moment from 'react-moment'
+import { Bar, Pie } from 'react-chartjs-2'
 import firebase from '../../firebase'
 import styled from 'styled-components'
-import Button from '../Button/Button'
 
 const Container = styled.section`
   padding: 2rem 1rem;
@@ -15,7 +14,10 @@ export default class Charts extends Component {
       items: [],
       filteredItems: [],
       allCategories: [],
-      allYears: []
+      allYears: [],
+      totalSpendings: 0,
+      chartData: {},
+      chartOptions: {}
     }
   }
 
@@ -47,6 +49,49 @@ export default class Charts extends Component {
     })
   }
 
+  updateChartModel() {
+    let labels = []
+    let data = []
+    let backgroundColor = []
+    let currentCategoryTotal = 0
+
+    // Go over all categories
+    this.state.allCategories.forEach(category => {
+      // Filter by current category and reduce the array into a total sum
+      currentCategoryTotal = this.state.items
+        .filter(item => item.category === category)
+        .reduce((total, current) => total + parseFloat(current.price), 0)
+      // Populate chart data, labels and bg colors
+      data.push(currentCategoryTotal.toFixed(2))
+      labels.push(category)
+      backgroundColor.push(
+        `rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(
+          Math.random() * 255
+        )}, ${Math.floor(Math.random() * 255)}, 0.6)`
+      )
+    })
+
+    this.setState({
+      // Chart data object is required
+      chartData: {
+        labels,
+        datasets: [
+          {
+            data,
+            backgroundColor
+          }
+        ]
+      },
+      // This object is customizable and not required to display the chart
+      chartOptions: {
+        title: {
+          display: true,
+          text: `Total spendings by category`
+        }
+      }
+    })
+  }
+
   componentWillMount = () => {
     // Get all purchases
     const itemsRef = firebase.database().ref('items')
@@ -56,6 +101,7 @@ export default class Charts extends Component {
       let newState = []
       let allCategories = []
       let allYears = []
+      let totalSpendings = 0
 
       for (let item in items) {
         // Extract short hands
@@ -79,24 +125,41 @@ export default class Charts extends Component {
         if (!allYears.includes(year)) {
           allYears.push(year)
         }
+
+        // Get total money spent
+        totalSpendings += parseFloat(price)
       }
 
       // Sort categories alphabetically
       allCategories.sort()
 
-      this.setState({
-        items: newState,
-        allCategories,
-        allYears
-      })
+      this.setState(
+        {
+          items: newState,
+          allCategories,
+          allYears,
+          totalSpendings: totalSpendings.toFixed(2)
+        },
+        () => this.updateChartModel()
+      )
     })
   }
 
   render() {
     return (
       <Fragment>
-        <Container>Chart1Test</Container>
-        <Container>Chart2</Container>
+        <Container>
+          {this.state.totalSpendings && (
+            <h2>Total spendings: {this.state.totalSpendings}</h2>
+          )}
+          <Pie data={this.state.chartData} options={this.state.chartOptions} />
+        </Container>
+        <Container>
+          <Bar
+            data={this.state.chartData}
+            options={{ legend: { display: false } }}
+          />
+        </Container>
       </Fragment>
     )
   }
