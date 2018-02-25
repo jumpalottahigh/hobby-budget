@@ -3,9 +3,7 @@ import { Bar, Pie } from 'react-chartjs-2'
 import firebase from '../../firebase'
 import styled from 'styled-components'
 
-const Container = styled.section`
-  padding: 2rem 1rem;
-`
+const Container = styled.section``
 
 export default class Charts extends Component {
   constructor() {

@@ -10,10 +10,18 @@ import './Stats.css'
 
 const Container = styled.section`
   padding: 2rem 1rem;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 
   h4 {
-    grid-column: span 3;
+    grid-column: span 2;
+  }
+
+  @media (min-width: 550px) {
+    grid-template-columns: repeat(3, 1fr);
+
+    h4 {
+      grid-column: span 3;
+    }
   }
 
   @media (min-width: 991px) {

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { auth } from '../../firebase'
+import Button from '../Button/Button'
 
 import './Login.css'
 
@@ -63,9 +64,9 @@ export default class Login extends Component {
         <div>
           {this.state.user ? (
             <div>
-              <button className="button" onClick={this.logout}>
+              <Button className="button" onClick={this.logout}>
                 Log Out
-              </button>
+              </Button>
             </div>
           ) : (
             <form onSubmit={this.login}>
@@ -80,9 +81,9 @@ export default class Login extends Component {
               {this.state.error && (
                 <span className="error">{this.state.error}</span>
               )}
-              <button type="submit" className="button">
+              <Button type="submit" className="button">
                 Log In
-              </button>
+              </Button>
             </form>
           )}
         </div>

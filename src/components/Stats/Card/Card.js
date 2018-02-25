@@ -27,8 +27,15 @@ export default class Card extends Component {
         </h5>
         <h5>{name}</h5>
         <p>
-          Price: {price} | Date:{' '}
-          <Moment format="Do MMM YYYY">{timestamp}</Moment>
+          <strong>
+            Price:{' '}
+            {parseInt(price, 10).toLocaleString('fi-FI', {
+              style: 'currency',
+              currency: 'EUR'
+            })}{' '}
+          </strong>
+          <br />
+          Date: <Moment format="Do MMM YYYY">{timestamp}</Moment>
         </p>
       </div>
     )

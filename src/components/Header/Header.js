@@ -22,6 +22,7 @@ class Header extends Component {
             <span role="img" aria-label="money bag emoji">
               💰
             </span>
+            <br />
             {` `}
             Budget Tracker
           </h4>

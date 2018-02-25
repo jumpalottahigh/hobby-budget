@@ -96,14 +96,14 @@ class Home extends Component {
               <input
                 type="text"
                 name="currentItem"
-                placeholder="Item / note"
+                placeholder=" Item / note"
                 onChange={this.handleChange}
                 value={this.state.currentItem}
               />
               <input
                 type="text"
                 name="currentPrice"
-                placeholder="Price"
+                placeholder=" Price"
                 onChange={this.handleChange}
                 value={this.state.currentPrice}
               />
