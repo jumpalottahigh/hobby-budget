@@ -1,0 +1,3458 @@
+[
+  {
+    "category": "alcohol",
+    "name": "Wine and beer",
+    "price": "35",
+    "timestamp": 1461867183217
+  },
+  {
+    "category": "alcohol",
+    "name": "beer",
+    "price": "3",
+    "timestamp": 1462027425115
+  },
+  {
+    "category": "alcohol",
+    "name": "beer",
+    "price": "3",
+    "timestamp": 1462443109125
+  },
+  {
+    "category": "entertainment",
+    "name": "Warcraft movie tickets",
+    "price": "31",
+    "timestamp": 1462443134682
+  },
+  {
+    "category": "clothes",
+    "name": "Anton clothes and bras (HM)",
+    "price": "85",
+    "timestamp": 1462443204679
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Weight scale",
+    "price": "25",
+    "timestamp": 1462446476800
+  },
+  {
+    "category": "entertainment",
+    "name": "forsen (twitch)",
+    "price": "5",
+    "timestamp": 1462461043046
+  },
+  {
+    "category": "clothes",
+    "name": "Baby summer hat",
+    "price": "7",
+    "timestamp": 1462629081022
+  },
+  {
+    "category": "makeup",
+    "name": "Nail polish",
+    "price": "4",
+    "timestamp": 1462629093854
+  },
+  {
+    "category": "baby-stuff",
+    "name": "Life jacket",
+    "price": "38",
+    "timestamp": 1462629108142
+  },
+  {
+    "category": "alcohol",
+    "name": "beer and wine",
+    "price": "18",
+    "timestamp": 1462640351628
+  },
+  {
+    "category": "junk-food",
+    "name": "icecream",
+    "price": "7",
+    "timestamp": 1462992895010
+  },
+  {
+    "category": "clothes",
+    "name": "Summer dresses",
+    "price": "65",
+    "timestamp": 1463734336660
+  },
+  {
+    "category": "home-upgrades",
+    "name": "key box and jar",
+    "price": "30",
+    "timestamp": 1464289851072
+  },
+  {
+    "category": "clothes",
+    "name": "Pants (g)",
+    "price": "80",
+    "timestamp": 1464441938922
+  },
+  {
+    "category": "clothes",
+    "name": "t-shirts (g)",
+    "price": "16",
+    "timestamp": 1464442364954
+  },
+  {
+    "category": "junk-food",
+    "name": "Burgerking",
+    "price": "18",
+    "timestamp": 1464452887505
+  },
+  {
+    "category": "junk-food",
+    "name": "Hesburger",
+    "price": "18",
+    "timestamp": 1464452959417
+  },
+  {
+    "category": "junk-food",
+    "name": "Ice cream",
+    "price": "7",
+    "timestamp": 1464454688870
+  },
+  {
+    "category": "alcohol",
+    "name": "Beers",
+    "price": "6",
+    "timestamp": 1464454710781
+  },
+  {
+    "category": "baby-stuff",
+    "name": "Floor play mat",
+    "price": "42",
+    "timestamp": 1464531299624
+  },
+  {
+    "category": "junk-food",
+    "name": "Ikea chocolate",
+    "price": "10",
+    "timestamp": 1464531370362
+  },
+  {
+    "category": "entertainment",
+    "name": "Overwatch",
+    "price": "40",
+    "timestamp": 1464555715079
+  },
+  {
+    "category": "junk-food",
+    "name": "Bubble gum",
+    "price": "2.4",
+    "timestamp": 1464756402573
+  },
+  {
+    "category": "home-upgrades",
+    "name": "New fridge",
+    "price": "440",
+    "timestamp": 1465143598392
+  },
+  {
+    "category": "entertainment",
+    "name": "Forsen",
+    "price": "5",
+    "timestamp": 1465143654323
+  },
+  {
+    "category": "alcohol",
+    "name": "Cider",
+    "price": "3",
+    "timestamp": 1465143677824
+  },
+  {
+    "category": "junk-food",
+    "name": "Chips and gum",
+    "price": "7",
+    "timestamp": 1465320083850
+  },
+  {
+    "category": "junk-food",
+    "name": "Chocolate cookies",
+    "price": "5",
+    "timestamp": 1465508563693
+  },
+  {
+    "category": "entertainment",
+    "name": "EURO 2016 Sporting Bet",
+    "price": "50",
+    "timestamp": 1465581083871
+  },
+  {
+    "category": "electronics",
+    "name": "Raspberry Pi Zero",
+    "price": "10",
+    "timestamp": 1465636289603
+  },
+  {
+    "category": "makeup",
+    "name": "Pretty.fi",
+    "price": "87",
+    "timestamp": 1465745487083
+  },
+  {
+    "category": "junk-food",
+    "name": "Cookies ",
+    "price": "5",
+    "timestamp": 1465745506070
+  },
+  {
+    "category": "entertainment",
+    "name": "Pajlada subscription",
+    "price": "5",
+    "timestamp": 1466053615130
+  },
+  {
+    "category": "junk-food",
+    "name": "McDonalds",
+    "price": "19",
+    "timestamp": 1466177142484
+  },
+  {
+    "category": "baby-stuff",
+    "name": "Elephant",
+    "price": "10",
+    "timestamp": 1466177166200
+  },
+  {
+    "category": "alcohol",
+    "name": "Beer and euro 2016 glass",
+    "price": "12.5",
+    "timestamp": 1466182083142
+  },
+  {
+    "category": "alcohol",
+    "name": "Wine",
+    "price": "22",
+    "timestamp": 1466182092076
+  },
+  {
+    "category": "junk-food",
+    "name": "Chocolates",
+    "price": "8",
+    "timestamp": 1466182215357
+  },
+  {
+    "category": "baby-stuff",
+    "name": "Baby play mat and hand walker",
+    "price": "18",
+    "timestamp": 1466416530962
+  },
+  {
+    "category": "junk-food",
+    "name": "Sour candy",
+    "price": "4",
+    "timestamp": 1466448979551
+  },
+  {
+    "category": "baby-stuff",
+    "name": "Spoon, teether and bowl",
+    "price": "14",
+    "timestamp": 1466617581333
+  },
+  {
+    "category": "junk-food",
+    "name": "Cookies",
+    "price": "5",
+    "timestamp": 1466617660749
+  },
+  {
+    "category": "entertainment",
+    "name": "Netflix",
+    "price": "10",
+    "timestamp": 1466618847761
+  },
+  {
+    "category": "junk-food",
+    "name": "Burger King",
+    "price": "31",
+    "timestamp": 1466698650092
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Aroma stick",
+    "price": "15",
+    "timestamp": 1466698921450
+  },
+  {
+    "category": "junk-food",
+    "name": "Snacks",
+    "price": "6",
+    "timestamp": 1466957888226
+  },
+  {
+    "category": "entertainment",
+    "name": "BG VPN",
+    "price": "3",
+    "timestamp": 1467143678111
+  },
+  {
+    "category": "junk-food",
+    "name": "Hesburger",
+    "price": "27",
+    "timestamp": 1467299260577
+  },
+  {
+    "category": "alcohol",
+    "name": "Sparkly and beer",
+    "price": "10.5",
+    "timestamp": 1467299287972
+  },
+  {
+    "category": "junk-food",
+    "name": "Cookies and bubble gum",
+    "price": "10",
+    "timestamp": 1467299348173
+  },
+  {
+    "category": "junk-food",
+    "name": "Cookies",
+    "price": "9",
+    "timestamp": 1467572122016
+  },
+  {
+    "category": "junk-food",
+    "name": "Hesburger",
+    "price": "27",
+    "timestamp": 1467646917980
+  },
+  {
+    "category": "junk-food",
+    "name": "Burger King",
+    "price": "20",
+    "timestamp": 1467741148678
+  },
+  {
+    "category": "entertainment",
+    "name": "forsen subscription",
+    "price": "5",
+    "timestamp": 1467741174404
+  },
+  {
+    "category": "clothes",
+    "name": "Anton new clothes",
+    "price": "33",
+    "timestamp": 1467982124649
+  },
+  {
+    "category": "makeup",
+    "name": "Nail polish and dry shampoo",
+    "price": "10",
+    "timestamp": 1467982182822
+  },
+  {
+    "category": "alcohol",
+    "name": "Wines",
+    "price": "23.45",
+    "timestamp": 1468077103958
+  },
+  {
+    "category": "junk-food",
+    "name": "Salty snacks",
+    "price": "8.5",
+    "timestamp": 1468077172558
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Storage and baby proof",
+    "price": "83",
+    "timestamp": 1468077307546
+  },
+  {
+    "category": "baby-stuff",
+    "name": "Baby Towel",
+    "price": "7",
+    "timestamp": 1468077326661
+  },
+  {
+    "category": "entertainment",
+    "name": "Pokemon Gold",
+    "price": "5",
+    "timestamp": 1468390441952
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Drawers, mirror and antre",
+    "price": "257.87",
+    "timestamp": 1468769693322
+  },
+  {
+    "category": "entertainment",
+    "name": "Phone case",
+    "price": "7",
+    "timestamp": 1468949268477
+  },
+  {
+    "category": "makeup",
+    "name": "Makeup holders",
+    "price": "8",
+    "timestamp": 1468949294414
+  },
+  {
+    "category": "entertainment",
+    "name": "Janne farewell gift",
+    "price": "10",
+    "timestamp": 1469016149290
+  },
+  {
+    "category": "junk-food",
+    "name": "Ice cream",
+    "price": "3.5",
+    "timestamp": 1469016169644
+  },
+  {
+    "category": "alcohol",
+    "name": "Beers with James and Balazs",
+    "price": "22",
+    "timestamp": 1469029699987
+  },
+  {
+    "category": "clothes",
+    "name": "Anton clothes",
+    "price": "40",
+    "timestamp": 1469119749695
+  },
+  {
+    "category": "clothes",
+    "name": "Georgi short pants and t shirts",
+    "price": "40",
+    "timestamp": 1469119803791
+  },
+  {
+    "category": "clothes",
+    "name": "Sofi dresses",
+    "price": "32",
+    "timestamp": 1469119840125
+  },
+  {
+    "category": "alcohol",
+    "name": "Wines and beers",
+    "price": "28.5",
+    "timestamp": 1469204615478
+  },
+  {
+    "category": "makeup",
+    "name": "Self tanning lotion",
+    "price": "11",
+    "timestamp": 1469204666797
+  },
+  {
+    "category": "junk-food",
+    "name": "Cookies and bubble gum",
+    "price": "7",
+    "timestamp": 1469204718211
+  },
+  {
+    "category": "clothes",
+    "name": "Shoes (G)",
+    "price": "30",
+    "timestamp": 1469363807506
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Wire detector(Class Olson)",
+    "price": "49.40",
+    "timestamp": 1469363915841
+  },
+  {
+    "category": "junk-food",
+    "name": "Bagels",
+    "price": "18",
+    "timestamp": 1469363982808
+  },
+  {
+    "category": "entertainment",
+    "name": "Petra wedding gift",
+    "price": "10",
+    "timestamp": 1469443439590
+  },
+  {
+    "category": "baby-stuff",
+    "name": "Anton toys",
+    "price": "9",
+    "timestamp": 1469478718617
+  },
+  {
+    "category": "electronics",
+    "name": "Car phone charger and holder",
+    "price": "4",
+    "timestamp": 1469479730982
+  },
+  {
+    "category": "entertainment",
+    "name": "Kick scooter and table tennis set",
+    "price": "55",
+    "timestamp": 1469637712539
+  },
+  {
+    "category": "baby-stuff",
+    "name": "Pacifier 6 month +",
+    "price": "5.75",
+    "timestamp": 1469637804878
+  },
+  {
+    "category": "alcohol",
+    "name": "Sparkly and IPAs",
+    "price": "22.5",
+    "timestamp": 1469809820785
+  },
+  {
+    "category": "alcohol",
+    "name": "Beers",
+    "price": "9",
+    "timestamp": 1470068052504
+  },
+  {
+    "category": "junk-food",
+    "name": "Burger King",
+    "price": "18",
+    "timestamp": 1470145467499
+  },
+  {
+    "category": "entertainment",
+    "name": "Forsen subscription",
+    "price": "5",
+    "timestamp": 1470387232780
+  },
+  {
+    "category": "alcohol",
+    "name": "Case of beer",
+    "price": "20",
+    "timestamp": 1470464277378
+  },
+  {
+    "category": "junk-food",
+    "name": "Brownies",
+    "price": "4",
+    "timestamp": 1470464290002
+  },
+  {
+    "category": "baby-stuff",
+    "name": "Baby playpen floor tiles",
+    "price": "22",
+    "timestamp": 1470559687581
+  },
+  {
+    "category": "junk-food",
+    "name": "Pizza",
+    "price": "20",
+    "timestamp": 1470751913481
+  },
+  {
+    "category": "entertainment",
+    "name": "Crocket",
+    "price": "13",
+    "timestamp": 1470758697613
+  },
+  {
+    "category": "entertainment",
+    "name": "Eating out",
+    "price": "32",
+    "timestamp": 1470760530513
+  },
+  {
+    "category": "clothes",
+    "name": "Boxers (G)",
+    "price": "10",
+    "timestamp": 1470761121952
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Rj11 cable",
+    "price": "6",
+    "timestamp": 1470761139724
+  },
+  {
+    "category": "alcohol",
+    "name": "Sofi's birthday Champaign",
+    "price": "43.70",
+    "timestamp": 1471009069746
+  },
+  {
+    "category": "entertainment",
+    "name": "Pajlada subscription",
+    "price": "5",
+    "timestamp": 1471339611339
+  },
+  {
+    "category": "alcohol",
+    "name": "Champaign",
+    "price": "15",
+    "timestamp": 1471539048876
+  },
+  {
+    "category": "junk-food",
+    "name": "Sweets",
+    "price": "3",
+    "timestamp": 1471539057988
+  },
+  {
+    "category": "electronics",
+    "name": "hdmi to dvi converter",
+    "price": "3",
+    "timestamp": 1471682216815
+  },
+  {
+    "category": "junk-food",
+    "name": "McDonald's",
+    "price": "20",
+    "timestamp": 1471944030927
+  },
+  {
+    "category": "entertainment",
+    "name": "Night out",
+    "price": "60",
+    "timestamp": 1471944142949
+  },
+  {
+    "category": "alcohol",
+    "name": "Wines",
+    "price": "35",
+    "timestamp": 1472228654158
+  },
+  {
+    "category": "junk-food",
+    "name": "Cookies",
+    "price": "11",
+    "timestamp": 1472307979294
+  },
+  {
+    "category": "baby-stuff",
+    "name": "Toys",
+    "price": "11",
+    "timestamp": 1472311039553
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Living room table; kitchen handles",
+    "price": "126",
+    "timestamp": 1472311080214
+  },
+  {
+    "category": "electronics",
+    "name": "bluetooth transmitter for PC",
+    "price": "2.68",
+    "timestamp": 1472380968534
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Samsung TV",
+    "price": "800",
+    "timestamp": 1472482882681
+  },
+  {
+    "category": "baby-stuff",
+    "name": "Key toy",
+    "price": "15",
+    "timestamp": 1472483046141
+  },
+  {
+    "category": "electronics",
+    "name": "Corsair wireless head set",
+    "price": "120",
+    "timestamp": 1472915976777
+  },
+  {
+    "category": "junk-food",
+    "name": "Macdonald's",
+    "price": "20",
+    "timestamp": 1472915991614
+  },
+  {
+    "category": "alcohol",
+    "name": "Spitfire",
+    "price": "4",
+    "timestamp": 1472922822430
+  },
+  {
+    "category": "entertainment",
+    "name": "Forsen",
+    "price": "5",
+    "timestamp": 1473402109009
+  },
+  {
+    "category": "alcohol",
+    "name": "Wine and beers",
+    "price": "25",
+    "timestamp": 1473402130495
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Yankee Candles",
+    "price": "75",
+    "timestamp": 1473506687389
+  },
+  {
+    "category": "entertainment",
+    "name": "Valia Birthday Gift",
+    "price": "10",
+    "timestamp": 1473619635498
+  },
+  {
+    "category": "junk-food",
+    "name": "Cookies",
+    "price": "5",
+    "timestamp": 1473776416249
+  },
+  {
+    "category": "alcohol",
+    "name": "beer and cider",
+    "price": "9",
+    "timestamp": 1474132543581
+  },
+  {
+    "category": "entertainment",
+    "name": "Oulu work trip (G)",
+    "price": "90",
+    "timestamp": 1474132570419
+  },
+  {
+    "category": "clothes",
+    "name": "Soffi pants",
+    "price": "40",
+    "timestamp": 1474143061979
+  },
+  {
+    "category": "junk-food",
+    "name": "Candy",
+    "price": "2",
+    "timestamp": 1474143658143
+  },
+  {
+    "category": "junk-food",
+    "name": "Pizza",
+    "price": "10",
+    "timestamp": 1474143693131
+  },
+  {
+    "category": "alcohol",
+    "name": "Wine,  Beer & Gift",
+    "price": "30",
+    "timestamp": 1474824399294
+  },
+  {
+    "category": "junk-food",
+    "name": "Chips & coke",
+    "price": "7",
+    "timestamp": 1474824416946
+  },
+  {
+    "category": "baby-stuff",
+    "name": "dachhund, spoons, bottle, head protector",
+    "price": "44.5",
+    "timestamp": 1474824527347
+  },
+  {
+    "category": "clothes",
+    "name": "Georgi shirts",
+    "price": "30",
+    "timestamp": 1474905996752
+  },
+  {
+    "category": "clothes",
+    "name": "Anton clothes",
+    "price": "30",
+    "timestamp": 1474906020159
+  },
+  {
+    "category": "makeup",
+    "name": "Hair, aroma sticks, face masks",
+    "price": "15",
+    "timestamp": 1474906147667
+  },
+  {
+    "category": "junk-food",
+    "name": "Hesburger with fredrika",
+    "price": "22",
+    "timestamp": 1475008460427
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Pineapple lamp",
+    "price": "30",
+    "timestamp": 1475008482904
+  },
+  {
+    "category": "clothes",
+    "name": "Body for Anton",
+    "price": "10",
+    "timestamp": 1475238432417
+  },
+  {
+    "category": "junk-food",
+    "name": "Lunch with Tiina",
+    "price": "8",
+    "timestamp": 1475238452017
+  },
+  {
+    "category": "entertainment",
+    "name": "Work taxi",
+    "price": "30",
+    "timestamp": 1475250033313
+  },
+  {
+    "category": "alcohol",
+    "name": "Beers",
+    "price": "8",
+    "timestamp": 1475250051572
+  },
+  {
+    "category": "alcohol",
+    "name": "Sparkly and wines",
+    "price": "22",
+    "timestamp": 1475250062363
+  },
+  {
+    "category": "makeup",
+    "name": "Pore stripes",
+    "price": "8.5",
+    "timestamp": 1475250111636
+  },
+  {
+    "category": "junk-food",
+    "name": "Cookies",
+    "price": "4",
+    "timestamp": 1475250125922
+  },
+  {
+    "category": "gifts",
+    "name": "Georgi dad's dentist",
+    "price": "150",
+    "timestamp": 1475251470486
+  },
+  {
+    "category": "gifts",
+    "name": "Fredrika bday",
+    "price": "100",
+    "timestamp": 1475251547782
+  },
+  {
+    "category": "junk-food",
+    "name": "Pizza",
+    "price": "19",
+    "timestamp": 1475770695282
+  },
+  {
+    "category": "alcohol",
+    "name": "Ale, red and white wine",
+    "price": "26",
+    "timestamp": 1475858272776
+  },
+  {
+    "category": "clothes",
+    "name": "Anton autumn clothes",
+    "price": "77",
+    "timestamp": 1475940895268
+  },
+  {
+    "category": "junk-food",
+    "name": "Chocolates and chips",
+    "price": "15",
+    "timestamp": 1476108477706
+  },
+  {
+    "category": "alcohol",
+    "name": "Wine and beer",
+    "price": "45",
+    "timestamp": 1476543990492
+  },
+  {
+    "category": "entertainment",
+    "name": "Going out with Stenli",
+    "price": "90",
+    "timestamp": 1476544136302
+  },
+  {
+    "category": "home-upgrades",
+    "name": "ikea baby blankets, boxes",
+    "price": "55",
+    "timestamp": 1476642651949
+  },
+  {
+    "category": "junk-food",
+    "name": "Cocos cookies",
+    "price": "10",
+    "timestamp": 1476642681732
+  },
+  {
+    "category": "junk-food",
+    "name": "McDonald's",
+    "price": "20",
+    "timestamp": 1476854102209
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Bed cover and pillow",
+    "price": "25",
+    "timestamp": 1477138518391
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Christmas lights, stretch wrap",
+    "price": "52",
+    "timestamp": 1477152049564
+  },
+  {
+    "category": "junk-food",
+    "name": "Hesburger",
+    "price": "20",
+    "timestamp": 1477228638630
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Christmas lights adapter",
+    "price": "20",
+    "timestamp": 1477228672434
+  },
+  {
+    "category": "alcohol",
+    "name": "Wine box",
+    "price": "30",
+    "timestamp": 1477583425640
+  },
+  {
+    "category": "alcohol",
+    "name": "Spitfire",
+    "price": "8",
+    "timestamp": 1477583811040
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Snow shovel, car cable, Christmas star",
+    "price": "70",
+    "timestamp": 1478365858961
+  },
+  {
+    "category": "alcohol",
+    "name": "Beers, wine, glogi",
+    "price": "64",
+    "timestamp": 1479571212263
+  },
+  {
+    "category": "entertainment",
+    "name": "StarWars movie tickets + boy scout calendar",
+    "price": "40",
+    "timestamp": 1479748620931
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Office and Anton's curtains",
+    "price": "25",
+    "timestamp": 1480706495743
+  },
+  {
+    "category": "gifts",
+    "name": "Nisu gift (S)",
+    "price": "35",
+    "timestamp": 1480713915927
+  },
+  {
+    "category": "junk-food",
+    "name": "Burger King",
+    "price": "20",
+    "timestamp": 1480860733973
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Christmas tree",
+    "price": "40",
+    "timestamp": 1480868579591
+  },
+  {
+    "category": "junk-food",
+    "name": "Cookies",
+    "price": "10",
+    "timestamp": 1480868622087
+  },
+  {
+    "category": "alcohol",
+    "name": "Red wine and glöggi",
+    "price": "43.86",
+    "timestamp": 1480952960676
+  },
+  {
+    "category": "junk-food",
+    "name": "Puotila pizza",
+    "price": "20",
+    "timestamp": 1481470391441
+  },
+  {
+    "category": "gifts",
+    "name": "Filco cherry mx brown keyboard(G)",
+    "price": "170",
+    "timestamp": 1481576794792
+  },
+  {
+    "category": "gifts",
+    "name": "Make up",
+    "price": "55",
+    "timestamp": 1481620520593
+  },
+  {
+    "category": "baby-stuff",
+    "name": "Child car seat",
+    "price": "500",
+    "timestamp": 1481652788594
+  },
+  {
+    "category": "junk-food",
+    "name": "Cookies and chips",
+    "price": "15",
+    "timestamp": 1481653630453
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Phillips hue",
+    "price": "90",
+    "timestamp": 1481723288698
+  },
+  {
+    "category": "electronics",
+    "name": "USB hub, USB-C to HDMI",
+    "price": "21.52",
+    "timestamp": 1481831453627
+  },
+  {
+    "category": "gifts",
+    "name": "Anton doughnut toy",
+    "price": "15",
+    "timestamp": 1482173250410
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Chandelier",
+    "price": "35",
+    "timestamp": 1482173271019
+  },
+  {
+    "category": "alcohol",
+    "name": "Wine box, spitfire, white wine",
+    "price": "45",
+    "timestamp": 1482173360155
+  },
+  {
+    "category": "entertainment",
+    "name": "Movie parking",
+    "price": "10",
+    "timestamp": 1482173473308
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Office ceiling lamp and plug",
+    "price": "15",
+    "timestamp": 1482252573823
+  },
+  {
+    "category": "alcohol",
+    "name": "Spitfire",
+    "price": "7",
+    "timestamp": 1482252598795
+  },
+  {
+    "category": "alcohol",
+    "name": "Christmas wine ",
+    "price": "35",
+    "timestamp": 1482424018429
+  },
+  {
+    "category": "gifts",
+    "name": "Lamp for bed room",
+    "price": "35",
+    "timestamp": 1482508867831
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Sauna thermometer and oils",
+    "price": "30",
+    "timestamp": 1482508970284
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Laundry machine",
+    "price": "350",
+    "timestamp": 1482509073486
+  },
+  {
+    "category": "gifts",
+    "name": "BG Christmas Donation",
+    "price": "5",
+    "timestamp": 1482748114726
+  },
+  {
+    "category": "gifts",
+    "name": "VR set, Peter Pan painting, wall stickers",
+    "price": "40",
+    "timestamp": 1482868103879
+  },
+  {
+    "category": "entertainment",
+    "name": "The elements of style (book)",
+    "price": "8.22",
+    "timestamp": 1483082755700
+  },
+  {
+    "category": "alcohol",
+    "name": "Wine and sparkly",
+    "price": "33",
+    "timestamp": 1483106014437
+  },
+  {
+    "category": "electronics",
+    "name": "Led light strips",
+    "price": "25",
+    "timestamp": 1483356857683
+  },
+  {
+    "category": "clothes",
+    "name": "Bra, sweater, t-shirt(S)",
+    "price": "45",
+    "timestamp": 1483357319355
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Pillow case",
+    "price": "4",
+    "timestamp": 1483357487857
+  },
+  {
+    "category": "home-upgrades",
+    "name": "outlet babyproofing plugs",
+    "price": "16",
+    "timestamp": 1483457597805
+  },
+  {
+    "category": "electronics",
+    "name": "2 x dvi to hdmi adapters",
+    "price": "2.25",
+    "timestamp": 1483808894048
+  },
+  {
+    "category": "electronics",
+    "name": "32 GB Samsung SD Card",
+    "price": "12.63",
+    "timestamp": 1483909353242
+  },
+  {
+    "category": "electronics",
+    "name": "Xiaomi mi band 2",
+    "price": "24",
+    "timestamp": 1484082042311
+  },
+  {
+    "category": "junk-food",
+    "name": "Chocolate",
+    "price": "3",
+    "timestamp": 1484326314869
+  },
+  {
+    "category": "alcohol",
+    "name": "Beer",
+    "price": "5",
+    "timestamp": 1484326322881
+  },
+  {
+    "category": "electronics",
+    "name": "433mhz receiver, esp8266 nodeMCU",
+    "price": "8",
+    "timestamp": 1484681937932
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Jungle book painting",
+    "price": "16",
+    "timestamp": 1484682017348
+  },
+  {
+    "category": "gifts",
+    "name": "SOS lapsikylla",
+    "price": "100",
+    "timestamp": 1484999433616
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Bedroom carpet",
+    "price": "20",
+    "timestamp": 1484999459578
+  },
+  {
+    "category": "baby-stuff",
+    "name": "Plate",
+    "price": "8",
+    "timestamp": 1485008972995
+  },
+  {
+    "category": "electronics",
+    "name": "433Mhz receiver & transmitter",
+    "price": "1.5",
+    "timestamp": 1485021180743
+  },
+  {
+    "category": "baby-stuff",
+    "name": "Edge protectors foam",
+    "price": "23",
+    "timestamp": 1485102295367
+  },
+  {
+    "category": "alcohol",
+    "name": "Wine, beer, sparkly",
+    "price": "23",
+    "timestamp": 1485189119040
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Lamp Anton's room and ball lights",
+    "price": "60",
+    "timestamp": 1485194798832
+  },
+  {
+    "category": "baby-stuff",
+    "name": "Toys, blanket",
+    "price": "40",
+    "timestamp": 1485194825687
+  },
+  {
+    "category": "baby-stuff",
+    "name": "Foam tiles",
+    "price": "72",
+    "timestamp": 1485288927720
+  },
+  {
+    "category": "electronics",
+    "name": "Hot glue gun, nodemcu",
+    "price": "15",
+    "timestamp": 1485292925224
+  },
+  {
+    "category": "alcohol",
+    "name": "Sparkly & white",
+    "price": "23",
+    "timestamp": 1485511840299
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Office shelves, make up take",
+    "price": "282",
+    "timestamp": 1485714215628
+  },
+  {
+    "category": "electronics",
+    "name": "Dvi to HDMI, heat shrink tubes",
+    "price": "7.5",
+    "timestamp": 1485881521381
+  },
+  {
+    "category": "electronics",
+    "name": "433mhz outlet plug, kids LED lamp kat",
+    "price": "27.92",
+    "timestamp": 1486159530226
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Mirror, toolbox, hot glue gun",
+    "price": "110",
+    "timestamp": 1486229816565
+  },
+  {
+    "category": "alcohol",
+    "name": "Wine and beer",
+    "price": "28",
+    "timestamp": 1486248381494
+  },
+  {
+    "category": "electronics",
+    "name": "Headset holder",
+    "price": "8.23",
+    "timestamp": 1486325611064
+  },
+  {
+    "category": "electronics",
+    "name": "Raspberry Pi 2.5A charger",
+    "price": "3.88",
+    "timestamp": 1486325909975
+  },
+  {
+    "category": "electronics",
+    "name": "Xiaomi Yeelight Blue 2",
+    "price": "18.53",
+    "timestamp": 1486326223666
+  },
+  {
+    "category": "makeup",
+    "name": "Lookfantastic order",
+    "price": "47",
+    "timestamp": 1486642569684
+  },
+  {
+    "category": "electronics",
+    "name": "Xiaomi mi band 2 (Sofi)",
+    "price": "26",
+    "timestamp": 1486757572538
+  },
+  {
+    "category": "alcohol",
+    "name": "Spitfire",
+    "price": "8",
+    "timestamp": 1486761208748
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Spare blanket",
+    "price": "38",
+    "timestamp": 1486761250385
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Thermos, printer ink",
+    "price": "80",
+    "timestamp": 1486907855233
+  },
+  {
+    "category": "makeup",
+    "name": "Fit me concealer",
+    "price": "8,50",
+    "timestamp": 1487235064075
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Bottles and eggbrush",
+    "price": "10",
+    "timestamp": 1487261226605
+  },
+  {
+    "category": "baby-stuff",
+    "name": "Baby Bottle and spoons",
+    "price": "10",
+    "timestamp": 1487261324893
+  },
+  {
+    "category": "electronics",
+    "name": "NodeMCU from ebay",
+    "price": "3.5",
+    "timestamp": 1487364760533
+  },
+  {
+    "category": "entertainment",
+    "name": "Warcraft Chronicles II (book)",
+    "price": "40",
+    "timestamp": 1487418188620
+  },
+  {
+    "category": "electronics",
+    "name": "USB adapters, hubs, gel wrist pad",
+    "price": "28",
+    "timestamp": 1487419616346
+  },
+  {
+    "category": "alcohol",
+    "name": "Wines",
+    "price": "35",
+    "timestamp": 1487419706515
+  },
+  {
+    "category": "electronics",
+    "name": "Soldering iron",
+    "price": "55",
+    "timestamp": 1487586909532
+  },
+  {
+    "category": "electronics",
+    "name": "Lumbar cushion, soldering materials",
+    "price": "11.60",
+    "timestamp": 1487712697725
+  },
+  {
+    "category": "alcohol",
+    "name": "Wine and beer",
+    "price": "30",
+    "timestamp": 1487966017673
+  },
+  {
+    "category": "baby-stuff",
+    "name": "Books",
+    "price": "14",
+    "timestamp": 1488052120723
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Smoothie blender",
+    "price": "35",
+    "timestamp": 1488052143426
+  },
+  {
+    "category": "clothes",
+    "name": "Georgi pants, sweaters, Anton pijama, Sofi shirt",
+    "price": "200",
+    "timestamp": 1488147704310
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Keyboard gel wrist support",
+    "price": "4.5",
+    "timestamp": 1488148060076
+  },
+  {
+    "category": "alcohol",
+    "name": "Whiskey and wine and beers",
+    "price": "53",
+    "timestamp": 1488555506312
+  },
+  {
+    "category": "clothes",
+    "name": "HomeAssistant T-Shirt",
+    "price": "20",
+    "timestamp": 1488747232206
+  },
+  {
+    "category": "entertainment",
+    "name": "Dinner, bar, taxi (Pontus bday)",
+    "price": "400",
+    "timestamp": 1488747338365
+  },
+  {
+    "category": "gifts",
+    "name": "Pontus bday present",
+    "price": "40",
+    "timestamp": 1488747416469
+  },
+  {
+    "category": "baby-stuff",
+    "name": "Anton bottles",
+    "price": "18",
+    "timestamp": 1488907618535
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Cupcake form",
+    "price": "7",
+    "timestamp": 1488907666835
+  },
+  {
+    "category": "electronics",
+    "name": "1 Yeelight and 2 RF outlets",
+    "price": "30",
+    "timestamp": 1489126870213
+  },
+  {
+    "category": "entertainment",
+    "name": "Georgi and web team event and dinner",
+    "price": "50",
+    "timestamp": 1489168269133
+  },
+  {
+    "category": "alcohol",
+    "name": "Wines and wine box",
+    "price": "46.60",
+    "timestamp": 1489245864722
+  },
+  {
+    "category": "baby-stuff",
+    "name": "Gate and toy",
+    "price": "106",
+    "timestamp": 1489511196301
+  },
+  {
+    "category": "makeup",
+    "name": "Stone bracelets",
+    "price": "50",
+    "timestamp": 1489651935135
+  },
+  {
+    "category": "clothes",
+    "name": "Home Assistant L t-shirt",
+    "price": "20",
+    "timestamp": 1489680403509
+  },
+  {
+    "category": "makeup",
+    "name": "Candle from eBay",
+    "price": "25",
+    "timestamp": 1489777357227
+  },
+  {
+    "category": "electronics",
+    "name": "Wires",
+    "price": "2",
+    "timestamp": 1489779381712
+  },
+  {
+    "category": "electronics",
+    "name": "3 breadboards",
+    "price": "4.5",
+    "timestamp": 1489835641130
+  },
+  {
+    "category": "makeup",
+    "name": "Yankee candles",
+    "price": "48",
+    "timestamp": 1489860247648
+  },
+  {
+    "category": "electronics",
+    "name": "Temperature, light and PIR motion sensors",
+    "price": "20",
+    "timestamp": 1489876994896
+  },
+  {
+    "category": "entertainment",
+    "name": "Moomin indiegogo",
+    "price": "35",
+    "timestamp": 1490208196890
+  },
+  {
+    "category": "electronics",
+    "name": "3 x Sonoff outlets",
+    "price": "20",
+    "timestamp": 1490390152857
+  },
+  {
+    "category": "makeup",
+    "name": "Bhcosmetics makeup",
+    "price": "55",
+    "timestamp": 1490642388864
+  },
+  {
+    "category": "clothes",
+    "name": "Weddingdress 1",
+    "price": "36",
+    "timestamp": 1490700863180
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Sofa group and sun chair for outside",
+    "price": "402",
+    "timestamp": 1490796900196
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Curtain & table cloth Jotex",
+    "price": "30",
+    "timestamp": 1490886944735
+  },
+  {
+    "category": "clothes",
+    "name": "HM Pleb new chlothes and Georgi new sweater and shirts",
+    "price": "195",
+    "timestamp": 1490887106332
+  },
+  {
+    "category": "makeup",
+    "name": "Bath & body works Vanilla Snowflake candle",
+    "price": "23",
+    "timestamp": 1490941608460
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Kitchen lamp and extension cord",
+    "price": "46.91",
+    "timestamp": 1491206910402
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Blender upgrade",
+    "price": "30",
+    "timestamp": 1491241911824
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Seeds, pots, soil",
+    "price": "45",
+    "timestamp": 1491241958012
+  },
+  {
+    "category": "electronics",
+    "name": "Power bank, USB to DC cables, door sensor",
+    "price": "20.45",
+    "timestamp": 1491245319521
+  },
+  {
+    "category": "makeup",
+    "name": "eBay B&BW handsanitizers",
+    "price": "15",
+    "timestamp": 1491693518815
+  },
+  {
+    "category": "alcohol",
+    "name": "Red wine",
+    "price": "12",
+    "timestamp": 1491693535594
+  },
+  {
+    "category": "baby-stuff",
+    "name": "iPad protector and screen protector",
+    "price": "16.50",
+    "timestamp": 1491839180253
+  },
+  {
+    "category": "junk-food",
+    "name": "Candy",
+    "price": "9",
+    "timestamp": 1491844757404
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Potato pots, herbs, onions, soil",
+    "price": "60",
+    "timestamp": 1491844800425
+  },
+  {
+    "category": "electronics",
+    "name": "Sensors, Node MCU",
+    "price": "14",
+    "timestamp": 1491887828572
+  },
+  {
+    "category": "gifts",
+    "name": "Github coffee mug and body for Anton",
+    "price": "37",
+    "timestamp": 1491894072271
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Shelves, decor, carpet, extension cord",
+    "price": "138",
+    "timestamp": 1492188872273
+  },
+  {
+    "category": "alcohol",
+    "name": "Wine and beers",
+    "price": "60",
+    "timestamp": 1492188898723
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Soil, pots, tomato and cucumber seeds",
+    "price": "88",
+    "timestamp": 1492273566879
+  },
+  {
+    "category": "makeup",
+    "name": "Candle Holder B&B works",
+    "price": "20",
+    "timestamp": 1492336902948
+  },
+  {
+    "category": "entertainment",
+    "name": "Audio books",
+    "price": "15",
+    "timestamp": 1492348883702
+  },
+  {
+    "category": "clothes",
+    "name": "Chlothes for Anton, bikini for Soffi",
+    "price": "64",
+    "timestamp": 1492689450516
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Bosch Hoover",
+    "price": "250",
+    "timestamp": 1492877803046
+  },
+  {
+    "category": "alcohol",
+    "name": "Heineken beers",
+    "price": "10",
+    "timestamp": 1492877826600
+  },
+  {
+    "category": "clothes",
+    "name": "Sofi joggers",
+    "price": "8",
+    "timestamp": 1492877846740
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Garden pots, garden basket",
+    "price": "12.5",
+    "timestamp": 1492877957710
+  },
+  {
+    "category": "electronics",
+    "name": "IKEA trådfri light bulbs",
+    "price": "75",
+    "timestamp": 1492956849653
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Carpet for Anton, shoe rack",
+    "price": "120",
+    "timestamp": 1492956927838
+  },
+  {
+    "category": "makeup",
+    "name": "Ikea candles",
+    "price": "5",
+    "timestamp": 1492956945201
+  },
+  {
+    "category": "junk-food",
+    "name": "Coconut balls and chocolate",
+    "price": "15",
+    "timestamp": 1492956969727
+  },
+  {
+    "category": "clothes",
+    "name": "Running clothes Soffi",
+    "price": "72",
+    "timestamp": 1493120513579
+  },
+  {
+    "category": "electronics",
+    "name": "Mq-9 mq-135 air quality sensors",
+    "price": "5.6",
+    "timestamp": 1493185714766
+  },
+  {
+    "category": "clothes",
+    "name": "Dress wedding 2",
+    "price": "40",
+    "timestamp": 1493293645949
+  },
+  {
+    "category": "baby-stuff",
+    "name": "Pool, sandbox toys, KA pillows",
+    "price": "40",
+    "timestamp": 1494093971615
+  },
+  {
+    "category": "junk-food",
+    "name": "Chocolates and soda",
+    "price": "5",
+    "timestamp": 1494094009514
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Soil, fertilizer, glue",
+    "price": "32",
+    "timestamp": 1494094091240
+  },
+  {
+    "category": "clothes",
+    "name": "Slimming body & occasion shirt Soffi",
+    "price": "65",
+    "timestamp": 1494414780892
+  },
+  {
+    "category": "clothes",
+    "name": "Suit pants, tie and evening purse",
+    "price": "75",
+    "timestamp": 1494534585447
+  },
+  {
+    "category": "electronics",
+    "name": "Cat6 cables, ArduinoNano, esp8266",
+    "price": "26.37",
+    "timestamp": 1494883936687
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Deck table",
+    "price": "133",
+    "timestamp": 1495214640504
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Deck chairs",
+    "price": "120",
+    "timestamp": 1495285813584
+  },
+  {
+    "category": "electronics",
+    "name": "dht22, light sensor, PIR for sensor node 2",
+    "price": "6.14",
+    "timestamp": 1495402692657
+  },
+  {
+    "category": "electronics",
+    "name": "Helping hand soldering, plastic boxes",
+    "price": "20",
+    "timestamp": 1495403701307
+  },
+  {
+    "category": "makeup",
+    "name": "Lipsticks and nail polishes",
+    "price": "45",
+    "timestamp": 1495454894637
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Earth painting set",
+    "price": "30",
+    "timestamp": 1495479629249
+  },
+  {
+    "category": "alcohol",
+    "name": "Wine and beer",
+    "price": "25",
+    "timestamp": 1495647258811
+  },
+  {
+    "category": "electronics",
+    "name": "PCB and wire cutters",
+    "price": "14",
+    "timestamp": 1495743297393
+  },
+  {
+    "category": "electronics",
+    "name": "Esp32",
+    "price": "6.8",
+    "timestamp": 1495793442190
+  },
+  {
+    "category": "home-upgrades",
+    "name": "BBQ coal, igniter, picture frames",
+    "price": "55",
+    "timestamp": 1495897645220
+  },
+  {
+    "category": "alcohol",
+    "name": "Beers and lonkero",
+    "price": "17",
+    "timestamp": 1495897697815
+  },
+  {
+    "category": "electronics",
+    "name": "LUX sensors",
+    "price": "2.45",
+    "timestamp": 1496609466574
+  },
+  {
+    "category": "entertainment",
+    "name": "Riina's wedding & drinks",
+    "price": "100",
+    "timestamp": 1496609507100
+  },
+  {
+    "category": "junk-food",
+    "name": "Pizza delivery",
+    "price": "22",
+    "timestamp": 1496636494547
+  },
+  {
+    "category": "gifts",
+    "name": "Sister and dad",
+    "price": "100",
+    "timestamp": 1496865848748
+  },
+  {
+    "category": "clothes",
+    "name": "Dress and fluffy pillowcase",
+    "price": "45",
+    "timestamp": 1496941338992
+  },
+  {
+    "category": "makeup",
+    "name": "B&B works summer candle",
+    "price": "23,50",
+    "timestamp": 1497038162308
+  },
+  {
+    "category": "clothes",
+    "name": "\"Party\" shoes",
+    "price": "28",
+    "timestamp": 1497092148371
+  },
+  {
+    "category": "junk-food",
+    "name": "Pizza",
+    "price": "22",
+    "timestamp": 1497108482411
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Saw, picture frame wood",
+    "price": "72",
+    "timestamp": 1497108659319
+  },
+  {
+    "category": "alcohol",
+    "name": "Wine box and beers",
+    "price": "45",
+    "timestamp": 1497108768181
+  },
+  {
+    "category": "electronics",
+    "name": "Boxes, esp chip, flux, antenna",
+    "price": "22",
+    "timestamp": 1497134420778
+  },
+  {
+    "category": "electronics",
+    "name": "Ws2812b LED strip and wemos d1",
+    "price": "23",
+    "timestamp": 1497218889172
+  },
+  {
+    "category": "baby-stuff",
+    "name": "Wooden cubes toy",
+    "price": "3",
+    "timestamp": 1497219244577
+  },
+  {
+    "category": "clothes",
+    "name": "Anton clothes",
+    "price": "54",
+    "timestamp": 1497559451994
+  },
+  {
+    "category": "gifts",
+    "name": "Prille bachelorette party",
+    "price": "60",
+    "timestamp": 1497559508606
+  },
+  {
+    "category": "alcohol",
+    "name": "Sparkly for bachelorette party",
+    "price": "28",
+    "timestamp": 1497559550764
+  },
+  {
+    "category": "entertainment",
+    "name": "Burgers and wine, prille bachelorette party",
+    "price": "36",
+    "timestamp": 1497775066648
+  },
+  {
+    "category": "electronics",
+    "name": "Pincers, wire strippers, carbon vinyl",
+    "price": "23.30",
+    "timestamp": 1497954770048
+  },
+  {
+    "category": "electronics",
+    "name": "Wires",
+    "price": "6",
+    "timestamp": 1497995079446
+  },
+  {
+    "category": "alcohol",
+    "name": "Midsummer whisky, wine and sparkly",
+    "price": "76",
+    "timestamp": 1498135857574
+  },
+  {
+    "category": "junk-food",
+    "name": "Pizza",
+    "price": "22",
+    "timestamp": 1498414652877
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Deck chair cushions",
+    "price": "20",
+    "timestamp": 1498414677465
+  },
+  {
+    "category": "makeup",
+    "name": "Fragrance mist",
+    "price": "7.5",
+    "timestamp": 1498488255310
+  },
+  {
+    "category": "electronics",
+    "name": "12v to 5v step down, blue tooth controllers",
+    "price": "11.30",
+    "timestamp": 1498686518788
+  },
+  {
+    "category": "baby-stuff",
+    "name": "Wooden blocks toy",
+    "price": "8.5",
+    "timestamp": 1498686666318
+  },
+  {
+    "category": "home-upgrades",
+    "name": "iPad holder, car seat organizer",
+    "price": "11.5",
+    "timestamp": 1498686691011
+  },
+  {
+    "category": "entertainment",
+    "name": "StarCraft Remastered",
+    "price": "15",
+    "timestamp": 1498855079240
+  },
+  {
+    "category": "electronics",
+    "name": "Moisture sensor, relays",
+    "price": "12",
+    "timestamp": 1498897995218
+  },
+  {
+    "category": "junk-food",
+    "name": "Pizza",
+    "price": "20",
+    "timestamp": 1499065388736
+  },
+  {
+    "category": "electronics",
+    "name": "Node mcu and wemos",
+    "price": "15.67",
+    "timestamp": 1499118983337
+  },
+  {
+    "category": "home-upgrades",
+    "name": "3 Sea canvas paintings",
+    "price": "17",
+    "timestamp": 1499170746869
+  },
+  {
+    "category": "entertainment",
+    "name": "Fonda del Sol lunch",
+    "price": "31.80",
+    "timestamp": 1499258981623
+  },
+  {
+    "category": "junk-food",
+    "name": "Seeds",
+    "price": "12",
+    "timestamp": 1499259917458
+  },
+  {
+    "category": "alcohol",
+    "name": "Heineken",
+    "price": "11",
+    "timestamp": 1499339634894
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Painting and phone cases",
+    "price": "10",
+    "timestamp": 1499339662599
+  },
+  {
+    "category": "alcohol",
+    "name": "Sparkly and beer",
+    "price": "25",
+    "timestamp": 1499534802927
+  },
+  {
+    "category": "makeup",
+    "name": "Body mist",
+    "price": "17.50",
+    "timestamp": 1499534903802
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Styrofoam balls, el wire",
+    "price": "13",
+    "timestamp": 1499669805649
+  },
+  {
+    "category": "entertainment",
+    "name": "Acrylic paint",
+    "price": "14.58",
+    "timestamp": 1499682072845
+  },
+  {
+    "category": "home-upgrades",
+    "name": "BBQ, Flowers, Soil",
+    "price": "90",
+    "timestamp": 1499714458947
+  },
+  {
+    "category": "junk-food",
+    "name": "Pizza",
+    "price": "22",
+    "timestamp": 1499757574919
+  },
+  {
+    "category": "clothes",
+    "name": "Soffi tops",
+    "price": "38",
+    "timestamp": 1499762903029
+  },
+  {
+    "category": "electronics",
+    "name": "Heat gun, crimp tool, Dupont assortment",
+    "price": "29.63",
+    "timestamp": 1499812856952
+  },
+  {
+    "category": "makeup",
+    "name": "Silver earrings and hair accessories ",
+    "price": "47",
+    "timestamp": 1499853690634
+  },
+  {
+    "category": "gifts",
+    "name": "Yankee candles",
+    "price": "43.86",
+    "timestamp": 1500116813001
+  },
+  {
+    "category": "gifts",
+    "name": "Nonna bday",
+    "price": "20",
+    "timestamp": 1500116824768
+  },
+  {
+    "category": "makeup",
+    "name": "Autumn candle",
+    "price": "30",
+    "timestamp": 1500392641601
+  },
+  {
+    "category": "electronics",
+    "name": "8m white led strip, 433 MHz RF outlets",
+    "price": "28.59",
+    "timestamp": 1500580637988
+  },
+  {
+    "category": "makeup",
+    "name": "Mascara, dry shampoo and lipstick",
+    "price": "30",
+    "timestamp": 1500644776201
+  },
+  {
+    "category": "alcohol",
+    "name": "Kamenitza",
+    "price": "23",
+    "timestamp": 1500644812651
+  },
+  {
+    "category": "alcohol",
+    "name": "Redwine",
+    "price": "12",
+    "timestamp": 1500644828647
+  },
+  {
+    "category": "electronics",
+    "name": "AA battery holder and lipo charger",
+    "price": "3.36",
+    "timestamp": 1500841900711
+  },
+  {
+    "category": "makeup",
+    "name": "Marshmallow fireside candle",
+    "price": "25",
+    "timestamp": 1501105704072
+  },
+  {
+    "category": "makeup",
+    "name": "Autumn candle",
+    "price": "23",
+    "timestamp": 1501105715921
+  },
+  {
+    "category": "makeup",
+    "name": "Leaves candle",
+    "price": "23,35",
+    "timestamp": 1501228400965
+  },
+  {
+    "category": "alcohol",
+    "name": "Wine, sparkly, beer",
+    "price": "40",
+    "timestamp": 1501260753809
+  },
+  {
+    "category": "alcohol",
+    "name": "Wines",
+    "price": "23",
+    "timestamp": 1501854424644
+  },
+  {
+    "category": "alcohol",
+    "name": "Beer",
+    "price": "14",
+    "timestamp": 1501961197848
+  },
+  {
+    "category": "baby-stuff",
+    "name": "iPad stand",
+    "price": "3",
+    "timestamp": 1502011007852
+  },
+  {
+    "category": "junk-food",
+    "name": "Macdonald's burgers",
+    "price": "20",
+    "timestamp": 1502037207460
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Wood picture frames, glue, batteries, outlets",
+    "price": "88.20",
+    "timestamp": 1502037297015
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Autumn decor",
+    "price": "15",
+    "timestamp": 1502129329514
+  },
+  {
+    "category": "baby-stuff",
+    "name": "Plebs Duplo numbertrain and car",
+    "price": "24",
+    "timestamp": 1502381561328
+  },
+  {
+    "category": "alcohol",
+    "name": "House warming",
+    "price": "89",
+    "timestamp": 1502459288399
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Christmas numberpainting",
+    "price": "6,4",
+    "timestamp": 1502823195915
+  },
+  {
+    "category": "junk-food",
+    "name": "Pizza",
+    "price": "22.20",
+    "timestamp": 1503156589140
+  },
+  {
+    "category": "electronics",
+    "name": "Lipo battery checker, car phone holder, zip ties",
+    "price": "9",
+    "timestamp": 1504772132149
+  },
+  {
+    "category": "electronics",
+    "name": "4S charger, spare props and prop nuts",
+    "price": "22.50",
+    "timestamp": 1504772829975
+  },
+  {
+    "category": "clothes",
+    "name": "Anton fall&Winter clothes and Soffi pyjama and underwear",
+    "price": "150",
+    "timestamp": 1504818811613
+  },
+  {
+    "category": "baby-stuff",
+    "name": "Android games for Anton",
+    "price": "13",
+    "timestamp": 1504893019167
+  },
+  {
+    "category": "makeup",
+    "name": "B&BWorks lotion x 2",
+    "price": "15",
+    "timestamp": 1505061420403
+  },
+  {
+    "category": "electronics",
+    "name": "4S battery, wire",
+    "price": "22.62",
+    "timestamp": 1505078534994
+  },
+  {
+    "category": "baby-stuff",
+    "name": "Wooden and magnetic letters and digits",
+    "price": "11.60",
+    "timestamp": 1505114855246
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Fall & Christmas pillowcases ebay",
+    "price": "15",
+    "timestamp": 1505118504598
+  },
+  {
+    "category": "baby-stuff",
+    "name": "Android animal game",
+    "price": "5",
+    "timestamp": 1505154037151
+  },
+  {
+    "category": "electronics",
+    "name": "georgi-yanev.com, yanev.tech and yanev.solutions for 1 year",
+    "price": "15",
+    "timestamp": 1505206378228
+  },
+  {
+    "category": "electronics",
+    "name": "Dremel and safety goggles",
+    "price": "16",
+    "timestamp": 1505285563255
+  },
+  {
+    "category": "electronics",
+    "name": "Aomway antennas and Velcro straps",
+    "price": "15",
+    "timestamp": 1505295526742
+  },
+  {
+    "category": "makeup",
+    "name": "B&BW Pumpkin Apple Candle",
+    "price": "23,50",
+    "timestamp": 1505296037522
+  },
+  {
+    "category": "electronics",
+    "name": "Drone backpack",
+    "price": "12.68",
+    "timestamp": 1505297330301
+  },
+  {
+    "category": "home-decor",
+    "name": "Autumn sunflower sign",
+    "price": "4",
+    "timestamp": 1505384631672
+  },
+  {
+    "category": "home-decor",
+    "name": "Storagebags hanger for downstairs toilet ",
+    "price": "6,75",
+    "timestamp": 1505420154934
+  },
+  {
+    "category": "gifts",
+    "name": "Valia birthday gift ",
+    "price": "40",
+    "timestamp": 1505760873046
+  },
+  {
+    "category": "alcohol",
+    "name": "IPA",
+    "price": "5",
+    "timestamp": 1506156108096
+  },
+  {
+    "category": "electronics",
+    "name": "Storage box and servos",
+    "price": "6.30",
+    "timestamp": 1506322129208
+  },
+  {
+    "category": "drone",
+    "name": "Buzzer, props, flux pen",
+    "price": "10",
+    "timestamp": 1506671043206
+  },
+  {
+    "category": "alcohol",
+    "name": "Wines",
+    "price": "16",
+    "timestamp": 1506692793677
+  },
+  {
+    "category": "alcohol",
+    "name": "2 cases of beer (during month)",
+    "price": "45",
+    "timestamp": 1506692860012
+  },
+  {
+    "category": "alcohol",
+    "name": "Wines (during month)",
+    "price": "41",
+    "timestamp": 1506692893935
+  },
+  {
+    "category": "electronics",
+    "name": "Google Drive yearly subscription",
+    "price": "20",
+    "timestamp": 1507057801541
+  },
+  {
+    "category": "drone",
+    "name": "Lipo 3S from Ebay",
+    "price": "14",
+    "timestamp": 1507322769429
+  },
+  {
+    "category": "clothes",
+    "name": "Jacket and overall second hand",
+    "price": "14",
+    "timestamp": 1507631996839
+  },
+  {
+    "category": "clothes",
+    "name": "Anton clothes H&M",
+    "price": "75",
+    "timestamp": 1507632017399
+  },
+  {
+    "category": "entertainment",
+    "name": "Star Wars: The Last Jedi tickets",
+    "price": "40",
+    "timestamp": 1507670298312
+  },
+  {
+    "category": "home-decor",
+    "name": "Paintbrushes",
+    "price": "5,5",
+    "timestamp": 1507728381249
+  },
+  {
+    "category": "home-decor",
+    "name": "Snowmen painting DIY and palette knives",
+    "price": "10,5",
+    "timestamp": 1507728861807
+  },
+  {
+    "category": "clothes",
+    "name": "Soffi bra and pleb pyjama Ellos",
+    "price": "45",
+    "timestamp": 1507800160331
+  },
+  {
+    "category": "drone",
+    "name": "2 3S lipo batteries from AliExpress",
+    "price": "22.40",
+    "timestamp": 1507824965334
+  },
+  {
+    "category": "home-decor",
+    "name": "Christmas little things eBay",
+    "price": "10,50",
+    "timestamp": 1508232966007
+  },
+  {
+    "category": "baby-stuff",
+    "name": "iPad screen protectors",
+    "price": "7",
+    "timestamp": 1508260679596
+  },
+  {
+    "category": "drone",
+    "name": "Flysky cable",
+    "price": "3.33",
+    "timestamp": 1508271479192
+  },
+  {
+    "category": "home-decor",
+    "name": "Bedroom Christmas stuff",
+    "price": "50",
+    "timestamp": 1508329988972
+  },
+  {
+    "category": "electronics",
+    "name": "AA rechargeable batteries",
+    "price": "31",
+    "timestamp": 1508353387128
+  },
+  {
+    "category": "home-decor",
+    "name": "Yankee candles",
+    "price": "19,50",
+    "timestamp": 1508434526978
+  },
+  {
+    "category": "home-decor",
+    "name": "Fresh balsam Christmas candle",
+    "price": "24,50",
+    "timestamp": 1509021344876
+  },
+  {
+    "category": "alcohol",
+    "name": "Glögi",
+    "price": "8,50",
+    "timestamp": 1509021389707
+  },
+  {
+    "category": "baby-stuff",
+    "name": "iPad Dave and Ava game",
+    "price": "3.5",
+    "timestamp": 1509173837465
+  },
+  {
+    "category": "alcohol",
+    "name": "Wine, beer, glogi",
+    "price": "40",
+    "timestamp": 1509173887462
+  },
+  {
+    "category": "drone",
+    "name": "Eachine micro drone (lunch money)",
+    "price": "46.20",
+    "timestamp": 1509485392732
+  },
+  {
+    "category": "clothes",
+    "name": "Christmas sweaters (S and G)",
+    "price": "80",
+    "timestamp": 1510255558512
+  },
+  {
+    "category": "alcohol",
+    "name": "Glögi and fathersday beer",
+    "price": "35",
+    "timestamp": 1510344176946
+  },
+  {
+    "category": "electronics",
+    "name": "Smart bracelet Georgi",
+    "price": "12.40",
+    "timestamp": 1510420437650
+  },
+  {
+    "category": "home-decor",
+    "name": "Christmas soaps, sauna drops and window sticker",
+    "price": "20",
+    "timestamp": 1510675369560
+  },
+  {
+    "category": "drone",
+    "name": "10 micro drone batteries and charger (lunch money)",
+    "price": "10.40",
+    "timestamp": 1510780661841
+  },
+  {
+    "category": "drone",
+    "name": "Flysky sim cable; m3 nylon standoffs",
+    "price": "9",
+    "timestamp": 1510941447489
+  },
+  {
+    "category": "baby-stuff",
+    "name": "Xylophone gift",
+    "price": "10",
+    "timestamp": 1511195496462
+  },
+  {
+    "category": "home-decor",
+    "name": "Christmas lights",
+    "price": "30",
+    "timestamp": 1511195524960
+  },
+  {
+    "category": "home-decor",
+    "name": "White mint latte b&bworks candle",
+    "price": "24",
+    "timestamp": 1511198920702
+  },
+  {
+    "category": "home-decor",
+    "name": "Winter roses white",
+    "price": "2,95",
+    "timestamp": 1511199483095
+  },
+  {
+    "category": "alcohol",
+    "name": "Red and white wine",
+    "price": "18,50",
+    "timestamp": 1511626700518
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Storageboxes for hats,gloves etc",
+    "price": "11",
+    "timestamp": 1511626741150
+  },
+  {
+    "category": "home-decor",
+    "name": "Christmas mat, towel, mugs etc",
+    "price": "50",
+    "timestamp": 1511626870100
+  },
+  {
+    "category": "home-decor",
+    "name": "Candle holder mirror/silver",
+    "price": "7,5",
+    "timestamp": 1511626911987
+  },
+  {
+    "category": "gifts",
+    "name": "Anton Christmas book cute animals",
+    "price": "12,5",
+    "timestamp": 1511626938860
+  },
+  {
+    "category": "drone",
+    "name": "DVR module (lunch money)",
+    "price": "13",
+    "timestamp": 1511798283194
+  },
+  {
+    "category": "entertainment",
+    "name": "Warcraft Chronicles III",
+    "price": "35",
+    "timestamp": 1512073981435
+  },
+  {
+    "category": "gifts",
+    "name": "Matching pijamas (s,g,a)",
+    "price": "22",
+    "timestamp": 1512076268710
+  },
+  {
+    "category": "home-decor",
+    "name": "Vanilla snowflake b&bworks candle (s lunch)",
+    "price": "24",
+    "timestamp": 1512205629055
+  },
+  {
+    "category": "home-decor",
+    "name": "Candle holder (s lunch)",
+    "price": "12,5",
+    "timestamp": 1512205780047
+  },
+  {
+    "category": "home-decor",
+    "name": "Wooden wallpaper aliexpress",
+    "price": "20",
+    "timestamp": 1512392488073
+  },
+  {
+    "category": "gifts",
+    "name": "Fredrika Christmas makeup",
+    "price": "20",
+    "timestamp": 1512392515363
+  },
+  {
+    "category": "makeup",
+    "name": "Soffi makeup (s lunch)",
+    "price": "40",
+    "timestamp": 1512392544730
+  },
+  {
+    "category": "alcohol",
+    "name": "Wine and glögi",
+    "price": "30",
+    "timestamp": 1512392689440
+  },
+  {
+    "category": "alcohol",
+    "name": "beer and wine",
+    "price": "27",
+    "timestamp": 1512913653934
+  },
+  {
+    "category": "electronics",
+    "name": "Desoldering pump and wick",
+    "price": "4",
+    "timestamp": 1512943562162
+  },
+  {
+    "category": "gifts",
+    "name": "Toy train for Anton",
+    "price": "40",
+    "timestamp": 1512943587617
+  },
+  {
+    "category": "makeup",
+    "name": "Makeup soffi",
+    "price": "40",
+    "timestamp": 1512983761301
+  },
+  {
+    "category": "gifts",
+    "name": "Christmas gift Anna",
+    "price": "21",
+    "timestamp": 1512983780298
+  },
+  {
+    "category": "gifts",
+    "name": "Christmas gift fredrika",
+    "price": "6",
+    "timestamp": 1512983794410
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Small thin screwdriver",
+    "price": "7",
+    "timestamp": 1513161692566
+  },
+  {
+    "category": "gifts",
+    "name": "8GB RAM and 250GB SSD (G)",
+    "price": "191",
+    "timestamp": 1513161745495
+  },
+  {
+    "category": "baby-stuff",
+    "name": "Fever and fever seizure medicine",
+    "price": "100",
+    "timestamp": 1513621821244
+  },
+  {
+    "category": "baby-stuff",
+    "name": "Car ticket at hospital",
+    "price": "60",
+    "timestamp": 1513621840004
+  },
+  {
+    "category": "home-decor",
+    "name": "Coconut snowflake b&bworks",
+    "price": "23",
+    "timestamp": 1513718083698
+  },
+  {
+    "category": "gifts",
+    "name": "Red wine and chocolate for neighbor",
+    "price": "13",
+    "timestamp": 1513718116284
+  },
+  {
+    "category": "electronics",
+    "name": "Sonoff s20 wifi outlet",
+    "price": "12.43",
+    "timestamp": 1513894152552
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Humidifier",
+    "price": "60",
+    "timestamp": 1514046664460
+  },
+  {
+    "category": "alcohol",
+    "name": "Red wine and gloggi",
+    "price": "50",
+    "timestamp": 1514046701704
+  },
+  {
+    "category": "alcohol",
+    "name": "Beers and white wine",
+    "price": "33",
+    "timestamp": 1514046742146
+  },
+  {
+    "category": "home-decor",
+    "name": "Winter b&bworks candle ",
+    "price": "22",
+    "timestamp": 1514321511137
+  },
+  {
+    "category": "baby-stuff",
+    "name": "JavaScript for babies",
+    "price": "9",
+    "timestamp": 1514486865385
+  },
+  {
+    "category": "entertainment",
+    "name": "Star wars last Jedi tickets again",
+    "price": "36",
+    "timestamp": 1514959809411
+  },
+  {
+    "category": "entertainment",
+    "name": "Audible subscription",
+    "price": "15",
+    "timestamp": 1515401732667
+  },
+  {
+    "category": "drone",
+    "name": "Pagoda rp sma antenna",
+    "price": "5.45",
+    "timestamp": 1515445151673
+  },
+  {
+    "category": "entertainment",
+    "name": "Google analytics udemy course",
+    "price": "15",
+    "timestamp": 1515834457188
+  },
+  {
+    "category": "alcohol",
+    "name": "White wine",
+    "price": "12",
+    "timestamp": 1515873591743
+  },
+  {
+    "category": "drone",
+    "name": "Taranis qx7 (lunch money)",
+    "price": "83",
+    "timestamp": 1515878757030
+  },
+  {
+    "category": "clothes",
+    "name": "Anton new clothes + bra for soffi",
+    "price": "101",
+    "timestamp": 1515879065889
+  },
+  {
+    "category": "alcohol",
+    "name": "Redwine box and beer",
+    "price": "45",
+    "timestamp": 1515879148306
+  },
+  {
+    "category": "electronics",
+    "name": "Blu tack",
+    "price": "2.29",
+    "timestamp": 1517173708795
+  },
+  {
+    "category": "electronics",
+    "name": "Electrical tape",
+    "price": "3.55",
+    "timestamp": 1517173861809
+  },
+  {
+    "category": "drone",
+    "name": "Taranis XM+ receiver (lunch money)",
+    "price": "10.62",
+    "timestamp": 1517379159709
+  },
+  {
+    "category": "entertainment",
+    "name": "WoW: Battle for Azeroth",
+    "price": "45",
+    "timestamp": 1517428945149
+  },
+  {
+    "category": "gifts",
+    "name": "RC car(Anton bday)",
+    "price": "15",
+    "timestamp": 1517739313892
+  },
+  {
+    "category": "alcohol",
+    "name": "Wine and beer",
+    "price": "34",
+    "timestamp": 1517760240752
+  },
+  {
+    "category": "gifts",
+    "name": "Cash register toy(Anton bday)",
+    "price": "10",
+    "timestamp": 1517760342040
+  },
+  {
+    "category": "drone",
+    "name": "eachine e010s motor",
+    "price": "3.65",
+    "timestamp": 1517780776462
+  },
+  {
+    "category": "electronics",
+    "name": "Loctite",
+    "price": "7.66",
+    "timestamp": 1518176738407
+  },
+  {
+    "category": "drone",
+    "name": "Motors, vtx for drone build (lunch money)",
+    "price": "59.40",
+    "timestamp": 1518389421650
+  },
+  {
+    "category": "home-decor",
+    "name": "Candle&roomscent coconut&lime",
+    "price": "25",
+    "timestamp": 1519559902088
+  },
+  {
+    "category": "home-upgrades",
+    "name": "New sofa and table masku",
+    "price": "468",
+    "timestamp": 1519583917176
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Livingroom carpet (s lunch)",
+    "price": "107",
+    "timestamp": 1519583964379
+  },
+  {
+    "category": "baby-stuff",
+    "name": "Anton bathroom step",
+    "price": "7",
+    "timestamp": 1519584041190
+  },
+  {
+    "category": "home-decor",
+    "name": "6xCanvas two sizes",
+    "price": "33",
+    "timestamp": 1519584119511
+  },
+  {
+    "category": "alcohol",
+    "name": "White wine + beer",
+    "price": "33",
+    "timestamp": 1519584255191
+  },
+  {
+    "category": "alcohol",
+    "name": "Wine and beer march",
+    "price": "60,50",
+    "timestamp": 1520013997008
+  },
+  {
+    "category": "drone",
+    "name": "FC, Runcam split mini, frame (lunch money)",
+    "price": "152",
+    "timestamp": 1520060453639
+  },
+  {
+    "category": "drone",
+    "name": "Taranis qx7 battery",
+    "price": "20",
+    "timestamp": 1520279988726
+  },
+  {
+    "category": "drone",
+    "name": "FrSky XM+ receiver",
+    "price": "12",
+    "timestamp": 1520280126680
+  },
+  {
+    "category": "entertainment",
+    "name": "Audible subscription",
+    "price": "15",
+    "timestamp": 1520399337475
+  },
+  {
+    "category": "home-decor",
+    "name": "Mrs Meyers cleaning supplies",
+    "price": "33",
+    "timestamp": 1520775142673
+  },
+  {
+    "category": "drone",
+    "name": "4S battery (BG points)",
+    "price": "18.40",
+    "timestamp": 1521007074078
+  },
+  {
+    "category": "makeup",
+    "name": "Essence satin blush coral",
+    "price": "6",
+    "timestamp": 1521117132443
+  },
+  {
+    "category": "drone",
+    "name": "props, 10mm screws and washers",
+    "price": "10",
+    "timestamp": 1521576630867
+  },
+  {
+    "category": "alcohol",
+    "name": "BG TriCycle white",
+    "price": "18",
+    "timestamp": 1522593834021
+  },
+  {
+    "category": "alcohol",
+    "name": "Beer Easter",
+    "price": "20",
+    "timestamp": 1522593903412
+  },
+  {
+    "category": "alcohol",
+    "name": "Wine Easter",
+    "price": "30",
+    "timestamp": 1522593948107
+  },
+  {
+    "category": "entertainment",
+    "name": "Udemy Java course",
+    "price": "20",
+    "timestamp": 1522778729251
+  },
+  {
+    "category": "baby-stuff",
+    "name": "Sunglasses",
+    "price": "31.80",
+    "timestamp": 1523017730446
+  },
+  {
+    "category": "makeup",
+    "name": "Concealer light&nude",
+    "price": "21",
+    "timestamp": 1523029748961
+  },
+  {
+    "category": "alcohol",
+    "name": "Redwine and beer",
+    "price": "20",
+    "timestamp": 1523030295434
+  },
+  {
+    "category": "entertainment",
+    "name": "Audible subscription",
+    "price": "15",
+    "timestamp": 1523089127011
+  },
+  {
+    "category": "clothes",
+    "name": "Crocs slippers and comfy pants",
+    "price": "40",
+    "timestamp": 1523179514535
+  },
+  {
+    "category": "gifts",
+    "name": "Fredrika gift stuff",
+    "price": "15",
+    "timestamp": 1523179535528
+  },
+  {
+    "category": "electronics",
+    "name": "Multimeter and screwdrivers",
+    "price": "32",
+    "timestamp": 1523217541726
+  },
+  {
+    "category": "home-decor",
+    "name": "Sheets, candle holders",
+    "price": "65",
+    "timestamp": 1523217619618
+  },
+  {
+    "category": "drone",
+    "name": "Resend 4in1 flight controller",
+    "price": "20",
+    "timestamp": 1523286545628
+  },
+  {
+    "category": "drone",
+    "name": "Motor (lunch money)",
+    "price": "14",
+    "timestamp": 1523390778606
+  },
+  {
+    "category": "alcohol",
+    "name": "Beer",
+    "price": "25",
+    "timestamp": 1523800432469
+  },
+  {
+    "category": "drone",
+    "name": "Spare motor (lunch money)",
+    "price": "11.58",
+    "timestamp": 1525005180049
+  },
+  {
+    "category": "home-decor",
+    "name": "B&BW coconut snowflake 2",
+    "price": "25",
+    "timestamp": 1525023409822
+  },
+  {
+    "category": "alcohol",
+    "name": "Wine and beer",
+    "price": "18",
+    "timestamp": 1525201763693
+  },
+  {
+    "category": "drone",
+    "name": "Aomway Commanders V1 goggles",
+    "price": "250",
+    "timestamp": 1525452877930
+  },
+  {
+    "category": "drone",
+    "name": "Screws and xt-60 connectors",
+    "price": "6",
+    "timestamp": 1525511374697
+  },
+  {
+    "category": "alcohol",
+    "name": "Champagne ",
+    "price": "40",
+    "timestamp": 1525614507722
+  },
+  {
+    "category": "entertainment",
+    "name": "fpvtips.com domain name",
+    "price": "9",
+    "timestamp": 1525984242485
+  },
+  {
+    "category": "gifts",
+    "name": "Tuuva baby gift",
+    "price": "10",
+    "timestamp": 1526535113241
+  },
+  {
+    "category": "alcohol",
+    "name": "Rosé and beer",
+    "price": "14",
+    "timestamp": 1526743987177
+  },
+  {
+    "category": "home-decor",
+    "name": "Plants and hedgehog",
+    "price": "45",
+    "timestamp": 1526839906081
+  },
+  {
+    "category": "baby-stuff",
+    "name": "Ball and bulldozer",
+    "price": "10",
+    "timestamp": 1526839950029
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Flower hooks chain and deck brush",
+    "price": "10",
+    "timestamp": 1526840004660
+  },
+  {
+    "category": "entertainment",
+    "name": "bet365 account deposit",
+    "price": "30",
+    "timestamp": 1526841250018
+  },
+  {
+    "category": "alcohol",
+    "name": "Beer case",
+    "price": "25",
+    "timestamp": 1527327588745
+  },
+  {
+    "category": "entertainment",
+    "name": "Anton bicycle",
+    "price": "35",
+    "timestamp": 1527327675200
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Pan and pillow",
+    "price": "43",
+    "timestamp": 1527329865749
+  },
+  {
+    "category": "drone",
+    "name": "Realacc drone backpack",
+    "price": "45",
+    "timestamp": 1527758816274
+  },
+  {
+    "category": "alcohol",
+    "name": "Rose’ wines",
+    "price": "23",
+    "timestamp": 1527941734389
+  },
+  {
+    "category": "alcohol",
+    "name": "Gift ca’marrone red",
+    "price": "14",
+    "timestamp": 1527941773658
+  },
+  {
+    "category": "entertainment",
+    "name": "Jo Nesbo books",
+    "price": "20",
+    "timestamp": 1528647152841
+  },
+  {
+    "category": "entertainment",
+    "name": "Logitech mouse mx m2",
+    "price": "80",
+    "timestamp": 1529092754324
+  },
+  {
+    "category": "drone",
+    "name": "matek f4 FC and racerstar 35 A 4i1 ESCs (62-53 refund)",
+    "price": "9",
+    "timestamp": 1529527126443
+  },
+  {
+    "category": "entertainment",
+    "name": "hans andersen and grim fairy tales books",
+    "price": "35",
+    "timestamp": 1529669993466
+  },
+  {
+    "category": "entertainment",
+    "name": "Magic Desktop 9 (1 year - Anton)",
+    "price": "40",
+    "timestamp": 1530428042808
+  },
+  {
+    "category": "alcohol",
+    "name": "White wine and beers",
+    "price": "22",
+    "timestamp": 1530458265354
+  },
+  {
+    "category": "clothes",
+    "name": "Clothes Anton",
+    "price": "75",
+    "timestamp": 1530458305701
+  },
+  {
+    "category": "clothes",
+    "name": "Pants Sofi",
+    "price": "30",
+    "timestamp": 1530458318016
+  },
+  {
+    "category": "clothes",
+    "name": "Pants G, sweater S",
+    "price": "90",
+    "timestamp": 1530458371715
+  },
+  {
+    "category": "clothes",
+    "name": "Shoes S",
+    "price": "16",
+    "timestamp": 1530458382580
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Balcony drapes and carpet",
+    "price": "117",
+    "timestamp": 1530458434066
+  },
+  {
+    "category": "gifts",
+    "name": "Kevin and Amanda",
+    "price": "50",
+    "timestamp": 1530458468280
+  },
+  {
+    "category": "home-decor",
+    "name": "Led Autumn garland eBay ",
+    "price": "12",
+    "timestamp": 1530530967390
+  },
+  {
+    "category": "alcohol",
+    "name": "White wine + beer",
+    "price": "21",
+    "timestamp": 1530812700888
+  },
+  {
+    "category": "electronics",
+    "name": "Soldering iron spare tips",
+    "price": "11",
+    "timestamp": 1530970184821
+  },
+  {
+    "category": "gifts",
+    "name": "Valia - Quake Champions game",
+    "price": "5",
+    "timestamp": 1531161919700
+  },
+  {
+    "category": "drone",
+    "name": "4S battery (left over money from goggles)",
+    "price": "30",
+    "timestamp": 1531592141210
+  },
+  {
+    "category": "home-decor",
+    "name": "B&BWorks Marshmallow Fireside",
+    "price": "26",
+    "timestamp": 1532182133453
+  },
+  {
+    "category": "home-decor",
+    "name": "B&Bworks Sweater Weather",
+    "price": "26",
+    "timestamp": 1532182158872
+  },
+  {
+    "category": "alcohol",
+    "name": "Rose’ and beer",
+    "price": "16,50",
+    "timestamp": 1532182180736
+  },
+  {
+    "category": "home-decor",
+    "name": "B&bworks Autumn candle",
+    "price": "26",
+    "timestamp": 1533232297348
+  },
+  {
+    "category": "home-decor",
+    "name": "B&bworks Autumn Day",
+    "price": "26",
+    "timestamp": 1533232318896
+  },
+  {
+    "category": "alcohol",
+    "name": "White wine and beer",
+    "price": "13,5",
+    "timestamp": 1533232347566
+  },
+  {
+    "category": "drone",
+    "name": "vtx03",
+    "price": "10",
+    "timestamp": 1533239459422
+  },
+  {
+    "category": "drone",
+    "name": "spare esc and motor for wizard x220",
+    "price": "16",
+    "timestamp": 1533374939621
+  },
+  {
+    "category": "drone",
+    "name": "Holybro Kakute FC + 4i1 ESC",
+    "price": "62.50",
+    "timestamp": 1533462589899
+  },
+  {
+    "category": "home-decor",
+    "name": "Sunflower bouquet and painting",
+    "price": "14,5",
+    "timestamp": 1533724895549
+  },
+  {
+    "category": "alcohol",
+    "name": "Rose’ box",
+    "price": "33",
+    "timestamp": 1533724928827
+  },
+  {
+    "category": "alcohol",
+    "name": "Beer",
+    "price": "6,5",
+    "timestamp": 1533724939096
+  },
+  {
+    "category": "entertainment",
+    "name": "georgi-yanev.com yearly subscription fee",
+    "price": "11.50",
+    "timestamp": 1534184549309
+  },
+  {
+    "category": "drone",
+    "name": "Customs for Micro drone",
+    "price": "20",
+    "timestamp": 1534446649109
+  },
+  {
+    "category": "drone",
+    "name": "Parallel charger for micro drone (BG points)",
+    "price": "23",
+    "timestamp": 1535125522996
+  },
+  {
+    "category": "gifts",
+    "name": "Fredrika birthday gift",
+    "price": "35",
+    "timestamp": 1538305156574
+  },
+  {
+    "category": "alcohol",
+    "name": "Wines and beer",
+    "price": "30",
+    "timestamp": 1538305189207
+  },
+  {
+    "category": "alcohol",
+    "name": "Rose’ box",
+    "price": "35",
+    "timestamp": 1538305210560
+  },
+  {
+    "category": "gifts",
+    "name": "Valia bday gift (Doom)",
+    "price": "20",
+    "timestamp": 1538329087946
+  },
+  {
+    "category": "entertainment",
+    "name": "Letter&Christmas stencils",
+    "price": "13",
+    "timestamp": 1538509424858
+  },
+  {
+    "category": "electronics",
+    "name": "Eco and Wood 3D printer filament",
+    "price": "50",
+    "timestamp": 1538920624760
+  },
+  {
+    "category": "entertainment",
+    "name": "Liftoff game",
+    "price": "20",
+    "timestamp": 1539374421735
+  },
+  {
+    "category": "entertainment",
+    "name": "3D printer filament wood and petg",
+    "price": "50",
+    "timestamp": 1539617087902
+  },
+  {
+    "category": "entertainment",
+    "name": "G work Chaplin pool",
+    "price": "20",
+    "timestamp": 1539723812712
+  },
+  {
+    "category": "entertainment",
+    "name": "Anton Peppa Pig book",
+    "price": "5",
+    "timestamp": 1540066345470
+  },
+  {
+    "category": "electronics",
+    "name": "Georgi Fifine Microphone",
+    "price": "35",
+    "timestamp": 1540066369078
+  },
+  {
+    "category": "entertainment",
+    "name": "Monkey Island games",
+    "price": "11",
+    "timestamp": 1543182342953
+  },
+  {
+    "category": "gifts",
+    "name": "Anton's 2018 Photo Book",
+    "price": "25",
+    "timestamp": 1543437052469
+  },
+  {
+    "category": "entertainment",
+    "name": "gyanev.com domain renewal",
+    "price": "9.3",
+    "timestamp": 1543738524390
+  },
+  {
+    "category": "gifts",
+    "name": "Anton STEM box",
+    "price": "13",
+    "timestamp": 1543754699978
+  },
+  {
+    "category": "gifts",
+    "name": "books, stencils, brushes",
+    "price": "45",
+    "timestamp": 1543757408129
+  },
+  {
+    "category": "home-upgrades",
+    "name": "Pixel 3 case",
+    "price": "7",
+    "timestamp": 1545992847790
+  },
+  {
+    "category": "entertainment",
+    "name": "Anton Kiwico box",
+    "price": "8",
+    "timestamp": 1548713325843
+  },
+  {
+    "category": "gifts",
+    "name": "Anton magna tiles birthday gift",
+    "price": "43",
+    "timestamp": 1549034669225
+  },
+  {
+    "category": "entertainment",
+    "name": "Anton puzzles",
+    "price": "20",
+    "timestamp": 1549304076612
+  },
+  {
+    "category": "entertainment",
+    "name": "Audible subscription",
+    "price": "7",
+    "timestamp": 1550304372214
+  },
+  {
+    "category": "drone",
+    "name": "4S battery",
+    "price": "25",
+    "timestamp": 1550921734430
+  },
+  {
+    "category": "drone",
+    "name": "Fixed tweezers and lipo bag",
+    "price": "10",
+    "timestamp": 1550921995752
+  },
+  {
+    "category": "drone",
+    "name": "Props",
+    "price": "5",
+    "timestamp": 1550922144514
+  }
+]
